@@ -11,6 +11,6 @@
 
 	<modules>
 		<module>visioneditor</module>
-    <module>visiontoolscommon</module>
+		<module>visiontoolscommon</module>
   </modules>
 </project>
