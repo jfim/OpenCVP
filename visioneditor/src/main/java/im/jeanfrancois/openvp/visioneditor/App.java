@@ -1,20 +1,22 @@
 package im.jeanfrancois.openvp.visioneditor;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import im.jeanfrancois.openvp.visioneditor.ui.MainWindow;
+import com.google.inject.Module;
+import net.guts.gui.application.AbstractApplication;
 
 import javax.swing.*;
+import java.util.List;
 
 /**
  * Hello world!
  */
-public class App {
+public class App extends AbstractApplication {
 	public static void main(String[] args) throws Exception {
 		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		new App().launch(args);
+	}
 
-		Injector injector = Guice.createInjector(new VisionEditorModule());
-		MainWindow mainWindow = injector.getInstance(MainWindow.class);
-		mainWindow.setVisible(true);
+	@Override
+	protected void initModules(String[] strings, List<Module> modules) {
+		modules.add(new VisionEditorModule());
 	}
 }
