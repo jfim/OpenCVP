@@ -33,6 +33,7 @@ public class GraphEditorPanel extends JPanel {
 
 		final mxGraphComponent comp = new mxGraphComponent(graph);
 		comp.zoomAndCenter();
+		comp.setBorder(BorderFactory.createEmptyBorder());
 		add(comp, BorderLayout.CENTER);
 	}
 }
