@@ -17,12 +17,12 @@ public class VisionEditorLayout implements LayoutInitializer {
 	public void initLayout(CControl control, ViewFactory factory) {
 		CBaseLocation base = CLocation.base(control.getContentArea());
 
-		SingleCDockable graph = factory.createSingle("Graph");
+		SingleCDockable graph = factory.createSingle("GraphEditorPanel");
 		control.add(graph);
 		graph.setLocation(base.normal());
 		graph.setVisible(true);
 
-		SingleCDockable console = factory.createSingle("Console");
+		SingleCDockable console = factory.createSingle("ConsolePanel");
 		control.add(console);
 		console.setLocation(base.normalSouth(0.33));
 		console.setVisible(true);

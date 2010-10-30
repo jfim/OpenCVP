@@ -22,8 +22,8 @@ public class VisionEditorModule extends AbstractModule {
 		Resources.bindRootBundle(binder(), Localizer.class, "visioneditor");
 
 		Docking.bindDefaultLayout(binder()).to(VisionEditorLayout.class);
-		Docking.bindView(binder(), "Graph", GraphEditorPanel.class);
-		Docking.bindView(binder(), "Console", ConsolePanel.class); 
+		Docking.bindView(binder(), "GraphEditorPanel", GraphEditorPanel.class);
+		Docking.bindView(binder(), "ConsolePanel", ConsolePanel.class); 
 		Docking.bindDefaultContentArea(binder());
 	}
 }
