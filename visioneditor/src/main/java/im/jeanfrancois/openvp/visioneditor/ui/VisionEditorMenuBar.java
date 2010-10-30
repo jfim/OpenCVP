@@ -18,5 +18,11 @@ public class VisionEditorMenuBar extends JMenuBar {
 	public VisionEditorMenuBar(MenuFactory menuFactory,
 	                           GutsApplicationActions appActions) {
 		add(menuFactory.createMenu("fileMenu", appActions.quit()));
+		add(menuFactory.createMenu("editMenu"));
+		add(menuFactory.createMenu("viewMenu"));
+		add(menuFactory.createMenu("playbackMenu"));
+		add(menuFactory.createMenu("analysisMenu"));
+		add(menuFactory.createMenu("utilitiesMenu"));
+		add(menuFactory.createMenu("helpMenu"));
 	}
 }
