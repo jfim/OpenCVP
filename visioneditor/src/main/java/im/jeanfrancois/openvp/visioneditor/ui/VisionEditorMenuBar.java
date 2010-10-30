@@ -21,10 +21,11 @@ public class VisionEditorMenuBar extends JMenuBar {
 	@Inject
 	public VisionEditorMenuBar(MenuFactory menuFactory,
 	                           GutsApplicationActions appActions,
+	                           GraphActions graphActions,
 	                           CControl control,
 	                           Localizer localizer) {
 		add(menuFactory.createMenu("fileMenu", appActions.quit()));
-		add(menuFactory.createMenu("editMenu"));
+		add(menuFactory.createMenu("editMenu", graphActions.layoutGraph()));
 		add(menuFactory.createMenu("viewMenu"));
 		add(menuFactory.createMenu("playbackMenu"));
 		add(menuFactory.createMenu("analysisMenu"));
