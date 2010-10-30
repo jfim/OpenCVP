@@ -3,6 +3,7 @@ package im.jeanfrancois.openvp.visioneditor.ui;
 import com.google.inject.Singleton;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Document me!
@@ -10,5 +11,24 @@ import javax.swing.*;
  * @author jfim
  */
 @Singleton
-public class ConsolePanel extends JPanel {
+public class ConsolePanel extends JPanel implements ConsoleOutputer {
+	JTextArea textArea = new JTextArea();
+
+	public ConsolePanel() {
+		setLayout(new BorderLayout());
+		JScrollPane scrollPane = new JScrollPane(textArea);
+		scrollPane.setBorder(BorderFactory.createEmptyBorder());
+		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		add(scrollPane, BorderLayout.CENTER);
+	}
+
+	@Override
+	public void outputLine(final String line) {
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				textArea.setText(textArea.getText() + line + "\n");
+			}
+		});
+	}
 }

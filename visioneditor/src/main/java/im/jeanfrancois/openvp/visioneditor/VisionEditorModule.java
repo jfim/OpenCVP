@@ -2,6 +2,7 @@ package im.jeanfrancois.openvp.visioneditor;
 
 import com.google.inject.AbstractModule;
 import im.jeanfrancois.openvp.visioneditor.i18n.Localizer;
+import im.jeanfrancois.openvp.visioneditor.ui.ConsoleOutputer;
 import im.jeanfrancois.openvp.visioneditor.ui.ConsolePanel;
 import im.jeanfrancois.openvp.visioneditor.ui.GraphEditorPanel;
 import im.jeanfrancois.openvp.visioneditor.ui.VisionEditorLayout;
@@ -18,6 +19,7 @@ public class VisionEditorModule extends AbstractModule {
 	@Override
 	protected void configure() {
 		bind(AppLifecycleStarter.class).to(VisionEditorAppLifecycleStarter.class);
+		bind(ConsoleOutputer.class).to(ConsolePanel.class);
 
 		Resources.bindRootBundle(binder(), Localizer.class, "visioneditor");
 
