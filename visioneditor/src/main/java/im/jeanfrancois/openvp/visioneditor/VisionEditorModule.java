@@ -2,10 +2,7 @@ package im.jeanfrancois.openvp.visioneditor;
 
 import com.google.inject.AbstractModule;
 import im.jeanfrancois.openvp.visioneditor.i18n.Localizer;
-import im.jeanfrancois.openvp.visioneditor.ui.ConsoleOutputer;
-import im.jeanfrancois.openvp.visioneditor.ui.ConsolePanel;
-import im.jeanfrancois.openvp.visioneditor.ui.GraphEditorPanel;
-import im.jeanfrancois.openvp.visioneditor.ui.VisionEditorLayout;
+import im.jeanfrancois.openvp.visioneditor.ui.*;
 import net.guts.gui.application.AppLifecycleStarter;
 import net.guts.gui.docking.Docking;
 import net.guts.gui.resource.Resources;
@@ -25,7 +22,9 @@ public class VisionEditorModule extends AbstractModule {
 
 		Docking.bindDefaultLayout(binder()).to(VisionEditorLayout.class);
 		Docking.bindView(binder(), "GraphEditorPanel", GraphEditorPanel.class);
-		Docking.bindView(binder(), "ConsolePanel", ConsolePanel.class); 
+		Docking.bindView(binder(), "ConsolePanel", ConsolePanel.class);
+		Docking.bindView(binder(), "VideoViewPanel", VideoViewPanel.class);
+		Docking.bindView(binder(), "PropertiesPanel", PropertiesPanel.class); 
 		Docking.bindDefaultContentArea(binder());
 	}
 }

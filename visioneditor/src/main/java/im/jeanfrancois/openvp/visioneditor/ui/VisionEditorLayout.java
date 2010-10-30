@@ -26,5 +26,15 @@ public class VisionEditorLayout implements LayoutInitializer {
 		control.add(console);
 		console.setLocation(base.normalSouth(0.33));
 		console.setVisible(true);
+
+		SingleCDockable videoView = factory.createSingle("VideoViewPanel");
+		control.add(videoView);
+		videoView.setLocation(graph.getBaseLocation());
+		videoView.setVisible(true);
+
+		SingleCDockable properties = factory.createSingle("PropertiesPanel");
+		control.add(properties);
+		properties.setLocation(base.normalEast(0.25));
+		properties.setVisible(true);
 	}
 }
