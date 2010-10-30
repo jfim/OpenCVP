@@ -1,5 +1,8 @@
 package im.jeanfrancois.openvp.visioneditor.ui;
 
+import bibliothek.gui.dock.common.CControl;
+import bibliothek.gui.dock.common.menu.SingleCDockableListMenuPiece;
+import bibliothek.gui.dock.facile.menu.RootMenuPiece;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import net.guts.gui.application.GutsApplicationActions;
@@ -16,13 +19,20 @@ import javax.swing.*;
 public class VisionEditorMenuBar extends JMenuBar {
 	@Inject
 	public VisionEditorMenuBar(MenuFactory menuFactory,
-	                           GutsApplicationActions appActions) {
+	                           GutsApplicationActions appActions,
+	                           CControl control) {
 		add(menuFactory.createMenu("fileMenu", appActions.quit()));
 		add(menuFactory.createMenu("editMenu"));
 		add(menuFactory.createMenu("viewMenu"));
 		add(menuFactory.createMenu("playbackMenu"));
 		add(menuFactory.createMenu("analysisMenu"));
 		add(menuFactory.createMenu("utilitiesMenu"));
+
+		// Create window menu to toggle application panes
+		RootMenuPiece root = new RootMenuPiece("Window", false) ;
+		root.add(new SingleCDockableListMenuPiece(control));
+		add(root.getMenu());
+
 		add(menuFactory.createMenu("helpMenu"));
 	}
 }

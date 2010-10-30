@@ -2,6 +2,7 @@ package im.jeanfrancois.openvp.visioneditor;
 
 import com.google.inject.Module;
 import net.guts.gui.application.AbstractApplication;
+import net.guts.gui.docking.DockingModule;
 
 import javax.swing.*;
 import java.util.List;
@@ -17,6 +18,7 @@ public class App extends AbstractApplication {
 
 	@Override
 	protected void initModules(String[] strings, List<Module> modules) {
+		modules.add(new DockingModule());
 		modules.add(new VisionEditorModule());
 	}
 }
