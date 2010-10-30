@@ -2,7 +2,7 @@ package im.jeanfrancois.openvp.visioneditor;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import im.jeanfrancois.openvp.visioneditor.ui.GraphEditor;
+import im.jeanfrancois.openvp.visioneditor.ui.GraphEditorPanel;
 import im.jeanfrancois.openvp.visioneditor.ui.VisionEditorMenuBar;
 import net.guts.gui.application.support.SingleFrameLifecycle;
 import net.miginfocom.swing.MigLayout;
@@ -17,19 +17,19 @@ import javax.swing.*;
 @Singleton
 public class VisionEditorAppLifecycleStarter extends SingleFrameLifecycle {
 	private JMenuBar menuBar;
-	private GraphEditor graphEditor;
+	private GraphEditorPanel graphEditorPanel;
 
 	@Inject
-	public VisionEditorAppLifecycleStarter(VisionEditorMenuBar menuBar, GraphEditor graphEditor) {
+	public VisionEditorAppLifecycleStarter(VisionEditorMenuBar menuBar, GraphEditorPanel graphEditorPanel) {
 		this.menuBar = menuBar;
-		this.graphEditor = graphEditor;
+		this.graphEditorPanel = graphEditorPanel;
 	}
 
 	@Override
 	protected void initFrame(JFrame frame) {
 		frame.setLayout(new MigLayout("", "[grow, fill]", "[grow, fill]"));
 		frame.setJMenuBar(menuBar);
-		frame.add(graphEditor);
+		frame.add(graphEditorPanel);
 	}
 
 	@Override

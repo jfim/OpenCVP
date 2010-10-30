@@ -13,9 +13,9 @@ import java.awt.*;
  * @author jfim
  */
 @Singleton
-public class GraphEditor extends JPanel {
+public class GraphEditorPanel extends JPanel {
 	@Inject
-	public GraphEditor(VisionGraph graph) {
+	public GraphEditorPanel(VisionGraph graph) {
 		setLayout(new BorderLayout());
 		
 		graph.setAllowDanglingEdges(false);
