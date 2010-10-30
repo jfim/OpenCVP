@@ -348,28 +348,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/net/guts/guts-gui-ex-docking-frames-common/0.1.0-SNAPSHOT/guts-gui-ex-docking-frames-common-0.1.0-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.dockingframes:docking-frames-common:1.0.8-SNAPSHOT">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-common/1.0.8-SNAPSHOT/docking-frames-common-1.0.8-SNAPSHOT.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-common/1.0.8-SNAPSHOT/docking-frames-common-1.0.8-SNAPSHOT-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-common/1.0.8-SNAPSHOT/docking-frames-common-1.0.8-SNAPSHOT-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: net.java.dev.designgridlayout:designgridlayout:1.2-SNAPSHOT">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/designgridlayout/designgridlayout/1.2-SNAPSHOT/designgridlayout-1.2-SNAPSHOT.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/designgridlayout/designgridlayout/1.2-SNAPSHOT/designgridlayout-1.2-SNAPSHOT-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/designgridlayout/designgridlayout/1.2-SNAPSHOT/designgridlayout-1.2-SNAPSHOT-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.slf4j:slf4j-log4j12:1.6.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-log4j12/1.6.0/slf4j-log4j12-1.6.0.jar!/" />
@@ -401,6 +379,50 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/glazedlists/glazedlists_java15/1.7.0/glazedlists_java15-1.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: jgraphx:jgraphx:1.4.2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/jgraphx/jgraphx/1.4.2.1/jgraphx-1.4.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/jgraphx/jgraphx/1.4.2.1/jgraphx-1.4.2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/jgraphx/jgraphx/1.4.2.1/jgraphx-1.4.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.dockingframes:docking-frames-common:1.0.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-common/1.0.8/docking-frames-common-1.0.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-common/1.0.8/docking-frames-common-1.0.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-common/1.0.8/docking-frames-common-1.0.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: net.java.dev.designgridlayout:designgridlayout:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/designgridlayout/designgridlayout/1.2/designgridlayout-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/designgridlayout/designgridlayout/1.2/designgridlayout-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/designgridlayout/designgridlayout/1.2/designgridlayout-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.dockingframes:docking-frames-core:1.0.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-core/1.0.8/docking-frames-core-1.0.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-core/1.0.8/docking-frames-core-1.0.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dockingframes/docking-frames-core/1.0.8/docking-frames-core-1.0.8-sources.jar!/" />
       </SOURCES>
     </library>
   </component>
