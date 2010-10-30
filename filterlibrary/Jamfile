@@ -1,0 +1,7 @@
+project :
+	requirements
+	:
+	usage-requirements
+;
+
+lib filterlibrary : [ glob src/*.cpp ] : <link>static ;

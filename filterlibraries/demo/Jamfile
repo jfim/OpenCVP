@@ -1,0 +1,9 @@
+# Demo project for OpenVP
+
+project :
+	requirements
+		<library>/filterlibrary//filterlibrary
+	:
+;
+
+lib demo : [ glob src/*.cpp ] : <link>shared ;

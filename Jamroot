@@ -1,0 +1,11 @@
+project openvp
+	: requirements <include>lib/boost-extension
+	;
+
+use-project /filterlibrary : filterlibrary ;
+
+build-project filterlibrary ;
+build-project executionmodel ;
+build-project filterlibraries ;
+
+install dist : filterlibraries : <install-dependencies>on <install-type>EXE <install-type>LIB ;
