@@ -31,6 +31,9 @@
     <orderEntry type="library" name="Maven: net.java.dev.glazedlists:glazedlists_java15:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: jgraphx:jgraphx:1.4.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.dockingframes:docking-frames-core:1.0.8" level="project" />
+    <orderEntry type="library" name="Maven: org.swinglabs:swingx:1.6" level="project" />
+    <orderEntry type="library" name="Maven: com.jhlabs:filters:2.0.235" level="project" />
+    <orderEntry type="library" name="Maven: org.swinglabs:swing-worker:1.1" level="project" />
   </component>
 </module>
 
