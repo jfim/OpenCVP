@@ -12,4 +12,6 @@ Filter* FilterFactory::buildFilter(std::string className, std::string filterName
 	return 0;
 }
 
-void FilterFactory::registerFilterClass(Filter* (*constructorFunctor)(std::string filterName)) {}
+void FilterFactory::registerFilterClass(std::string filterClassName, Filter* (*constructorFunctor)(std::string filterName)) {
+	constructorFunctorMap[filterClassName]=constructorFunctor;
+}
