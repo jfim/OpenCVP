@@ -4,7 +4,9 @@ import bibliothek.extension.gui.dock.theme.FlatTheme;
 import bibliothek.gui.dock.common.CControl;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import im.jeanfrancois.openvp.visioneditor.ui.VisionEditorMainToolBar;
 import im.jeanfrancois.openvp.visioneditor.ui.VisionEditorMenuBar;
+import im.jeanfrancois.openvp.visioneditor.ui.VisionEditorStatusBar;
 import net.guts.gui.docking.DockingLifecycle;
 
 import javax.swing.*;
@@ -18,10 +20,14 @@ import java.awt.*;
 @Singleton
 public class VisionEditorAppLifecycleStarter extends DockingLifecycle {
 	private JMenuBar menuBar;
+	private VisionEditorMainToolBar visionEditorMainToolBar;
+	private VisionEditorStatusBar visionEditorStatusBar;
 
 	@Inject
-	public VisionEditorAppLifecycleStarter(VisionEditorMenuBar menuBar, CControl control) {
+	public VisionEditorAppLifecycleStarter(VisionEditorMenuBar menuBar, CControl control, VisionEditorMainToolBar visionEditorMainToolBar, VisionEditorStatusBar visionEditorStatusBar) {
 		this.menuBar = menuBar;
+		this.visionEditorMainToolBar = visionEditorMainToolBar;
+		this.visionEditorStatusBar = visionEditorStatusBar;
 		control.setTheme(new FlatTheme());
 	}
 
@@ -36,9 +42,9 @@ public class VisionEditorAppLifecycleStarter extends DockingLifecycle {
 
 		// Add the tool bar, status bar and docking container back in
 		contentPane.setLayout(new BorderLayout());
-		contentPane.add(new JLabel("Toolbar"), BorderLayout.NORTH);
+		contentPane.add(visionEditorMainToolBar, BorderLayout.NORTH);
 		contentPane.add(dockingContainer, BorderLayout.CENTER);
-		contentPane.add(new JLabel("Statusbar"), BorderLayout.SOUTH);
+		contentPane.add(visionEditorStatusBar, BorderLayout.SOUTH);
 	}
 
 	@Override
