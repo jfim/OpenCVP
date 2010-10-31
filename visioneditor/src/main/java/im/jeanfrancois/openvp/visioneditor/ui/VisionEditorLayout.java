@@ -36,5 +36,10 @@ public class VisionEditorLayout implements LayoutInitializer {
 		control.add(properties);
 		properties.setLocation(base.normalEast(0.25));
 		properties.setVisible(true);
+
+		SingleCDockable processing = factory.createSingle("ProcessingPanel");
+		control.add(processing);
+		processing.setLocation(base.normalEast(0.25).south(0.5));
+		processing.setVisible(true);
 	}
 }

@@ -24,7 +24,8 @@ public class VisionEditorModule extends AbstractModule {
 		Docking.bindView(binder(), "GraphEditorPanel", GraphEditorPanel.class);
 		Docking.bindView(binder(), "ConsolePanel", ConsolePanel.class);
 		Docking.bindView(binder(), "VideoViewPanel", VideoViewPanel.class);
-		Docking.bindView(binder(), "PropertiesPanel", PropertiesPanel.class); 
+		Docking.bindView(binder(), "PropertiesPanel", PropertiesPanel.class);
+		Docking.bindView(binder(), "ProcessingPanel", ProcessingPanel.class);
 		Docking.bindDefaultContentArea(binder());
 	}
 }
