@@ -1,1 +1,1 @@
-library executionmodel : [ glob src/*.cpp ] : <link>static ;
+lib executionmodel : [ glob src/*.cpp ] : <link>static ;
