@@ -23,12 +23,41 @@ public class VisionEditorMenuBar extends JMenuBar {
 	                           GutsApplicationActions appActions,
 	                           GraphActions graphActions,
 	                           VisionEditorActions visionEditorActions,
+	                           PlaybackActions playbackActions,
 	                           CControl control,
 	                           Localizer localizer) {
-		add(menuFactory.createMenu("fileMenu", visionEditorActions.newFilterchain(), appActions.quit()));
-		add(menuFactory.createMenu("editMenu", graphActions.layoutGraph()));
-		add(menuFactory.createMenu("viewMenu"));
-		add(menuFactory.createMenu("playbackMenu"));
+		add(menuFactory.createMenu("fileMenu",
+				visionEditorActions.newFilterchain(),
+				visionEditorActions.openFilterchain(),
+				visionEditorActions.saveFilterchain(),
+				visionEditorActions.saveFilterchainAs(),
+				MenuFactory.ACTION_SEPARATOR,
+				visionEditorActions.saveOutputImageAs(),
+				visionEditorActions.exportMovie(),
+				MenuFactory.ACTION_SEPARATOR,
+				visionEditorActions.loadMovie(),
+				MenuFactory.ACTION_SEPARATOR,
+				appActions.quit()));
+		add(menuFactory.createMenu("editMenu",
+				visionEditorActions.undo(),
+				visionEditorActions.redo(),
+				visionEditorActions.copy(),
+				visionEditorActions.paste(),
+				MenuFactory.ACTION_SEPARATOR,
+				graphActions.layoutGraph()));
+		add(menuFactory.createMenu("playbackMenu",
+				playbackActions.seekToFirstFrame(),
+				playbackActions.seekToPreviousFrame(),
+				playbackActions.play(),
+				playbackActions.stop(),
+				playbackActions.seekToNextFrame(),
+				playbackActions.seekToLastFrame(),
+				playbackActions.loopPlayback(),
+				MenuFactory.ACTION_SEPARATOR,
+				playbackActions.slowPlayback(),
+				playbackActions.normalPlayback(),
+				playbackActions.fasterPlayback(),
+				playbackActions.fastestPlayback()));
 		add(menuFactory.createMenu("analysisMenu"));
 		add(menuFactory.createMenu("utilitiesMenu"));
 
