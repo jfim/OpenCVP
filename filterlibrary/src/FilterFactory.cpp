@@ -1,5 +1,7 @@
 #include "FilterFactory.h"
 
+FilterFactory* FilterFactory::instance = 0;
+
 FilterFactory::FilterFactory() {}
 FilterFactory::~FilterFactory() {}
 
@@ -26,4 +28,12 @@ Filter* FilterFactory::buildFilter(std::string className, std::string filterName
 
 void FilterFactory::registerFilterClass(std::string filterClassName, Filter* (*constructorFunctor)(std::string filterName)) {
 	constructorFunctorMap[filterClassName] = constructorFunctor;
+}
+
+FilterFactory& FilterFactory::getInstance() {
+	if(instance == 0) {
+		instance = new FilterFactory();
+	}
+
+	return *instance;
 }
