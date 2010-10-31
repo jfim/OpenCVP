@@ -6,7 +6,11 @@
 #include <map>
 
 #include "Filter.h"
-#include "FilterRegistrator.h"
+
+class FilterConstructorFunctor {
+	public:
+		virtual Filter* const operator()(std::string filterName) = 0;
+};
 
 class FilterFactory {
 	private:
@@ -14,14 +18,13 @@ class FilterFactory {
 		~FilterFactory();
 
 	private:
-		typedef Filter* (*filterConstructorFunctor)(std::string);
-		std::map<std::string, filterConstructorFunctor> constructorFunctorMap;
+		std::map<std::string, FilterConstructorFunctor*> constructorFunctorMap;
 		static FilterFactory* instance;
 
 	public:
 		std::vector<std::string> getRegisteredFilterClasses();
 		Filter* buildFilter(std::string className, std::string filterName);
-		void registerFilterClass(std::string filterClassName, Filter* (*constructorFunctor)(std::string filterName));
+		void registerFilterClass(std::string filterClassName, FilterConstructorFunctor* constructorFunctor);
 		static FilterFactory& getInstance();
 };
 
