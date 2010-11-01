@@ -8,4 +8,4 @@ build-project filterlibrary ;
 build-project executionmodel ;
 build-project filterlibraries ;
 
-install dist : filterlibraries : <install-dependencies>on <install-type>EXE <install-type>LIB ;
+install dist : filterlibraries executionmodel : <install-dependencies>on <install-type>EXE <install-type>LIB ;
