@@ -2,6 +2,7 @@ project :
 	requirements
 	:
 	usage-requirements
+		<include>src
 ;
 
 lib filterlibrary : [ glob src/*.cpp ] : <link>static ;
