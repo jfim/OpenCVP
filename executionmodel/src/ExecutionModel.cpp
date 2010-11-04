@@ -14,6 +14,7 @@ ExecutionModel::ExecutionModel() {
 	FilterLibrary filterLibrary("demo.dll");
 	if(filterLibrary.isValid()) {
 		cout << "Loaded filter library " << filterLibrary.getVendor() << " " << filterLibrary.getName() << " " << filterLibrary.getVersion() << endl;
+		loadedFilterLibraries.push_back(filterLibrary);
 	}
 }
 
