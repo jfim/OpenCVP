@@ -83,9 +83,9 @@
 			<version>1.6</version>
 		</dependency>
 		<dependency>
-			<groupId>org.nuiton.thirdparty</groupId>
-			<artifactId>l2fprod-common</artifactId>
-			<version>0.1</version>
+			<groupId>com.l2fprod</groupId>
+			<artifactId>l2fprod-common-all</artifactId>
+			<version>7.3</version>
 		</dependency>
 		<dependency>
 			<groupId>im.jeanfrancois.openvp</groupId>
