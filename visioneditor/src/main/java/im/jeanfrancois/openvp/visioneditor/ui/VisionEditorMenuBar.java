@@ -6,7 +6,6 @@ import bibliothek.gui.dock.facile.menu.RootMenuPiece;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import im.jeanfrancois.openvp.visioneditor.i18n.Localizer;
-import net.guts.gui.application.GutsApplicationActions;
 import net.guts.gui.menu.MenuFactory;
 
 import javax.swing.*;
@@ -20,7 +19,6 @@ import javax.swing.*;
 public class VisionEditorMenuBar extends JMenuBar {
 	@Inject
 	public VisionEditorMenuBar(MenuFactory menuFactory,
-	                           GutsApplicationActions appActions,
 	                           GraphActions graphActions,
 	                           VisionEditorActions visionEditorActions,
 	                           PlaybackActions playbackActions,
@@ -37,7 +35,7 @@ public class VisionEditorMenuBar extends JMenuBar {
 				MenuFactory.ACTION_SEPARATOR,
 				visionEditorActions.loadMovie(),
 				MenuFactory.ACTION_SEPARATOR,
-				appActions.quit()));
+				visionEditorActions.quit()));
 		add(menuFactory.createMenu("editMenu",
 				visionEditorActions.undo(),
 				visionEditorActions.redo(),

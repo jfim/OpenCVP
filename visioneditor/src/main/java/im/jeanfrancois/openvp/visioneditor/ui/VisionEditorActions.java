@@ -1,13 +1,35 @@
 package im.jeanfrancois.openvp.visioneditor.ui;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import net.guts.gui.action.GutsAction;
+import net.guts.gui.exit.ExitController;
 
 /**
  * Document me!
  *
  * @author jfim
  */
+@Singleton
 public class VisionEditorActions {
+	private final ExitController exitController;
+
+	@Inject
+	public VisionEditorActions(ExitController exitController) {
+		this.exitController = exitController;
+	}
+
+	private final GutsAction _quit = new GutsAction("quit") {
+		@Override
+		protected void perform() {
+			exitController.shutdown();
+		}
+	};
+
+	public GutsAction quit() {
+		return _quit;
+	}
+
 	private final GutsAction _newFilterchain = new GutsAction("newFilterchain") {
 		@Override
 		protected void perform() {
