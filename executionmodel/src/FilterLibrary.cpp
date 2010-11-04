@@ -15,8 +15,10 @@ FilterLibrary::FilterLibrary(string libName) : library(libName) {
 	getFilterLibraryVendor = library.get<char*>("getFilterLibraryVendor");
 	getFilterLibraryName = library.get<char*>("getFilterLibraryName");
 	getFilterLibraryVersion = library.get<char*>("getFilterLibraryVersion");
+	getRegisteredFilterClassCount = library.get<int>("getRegisteredFilterClassCount");
+	getRegisteredFilterClassName = library.get<char*, int>("getRegisteredFilterClassName");
 
-	if(!getFilterLibraryVendor || !getFilterLibraryName || !getFilterLibraryVersion) {
+	if(!getFilterLibraryVendor || !getFilterLibraryName || !getFilterLibraryVersion || !getRegisteredFilterClassCount || !getRegisteredFilterClassName) {
 		cerr << "Library " << libName << " does not export all required functions" << endl;
 		valid = false;
 		return;
@@ -25,6 +27,13 @@ FilterLibrary::FilterLibrary(string libName) : library(libName) {
 	vendor = getFilterLibraryVendor();
 	name = getFilterLibraryName();
 	version = getFilterLibraryVersion();
+
+	// Load all the filter class names
+	const int registeredFilterClassCount = getRegisteredFilterClassCount();
+	for(int i = 0; i < registeredFilterClassCount; ++i) {
+		string filterClassName(getRegisteredFilterClassName(i));
+		filterClassNames.push_back(filterClassName);
+	}
 
 	valid = true;
 }

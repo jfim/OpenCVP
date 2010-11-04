@@ -2,6 +2,7 @@
 #define FILTER_LIBRARY_H_123498012894210841092385098013485012
 
 #include <string>
+#include <vector>
 #include <boost/extension/shared_library.hpp>
 #include <boost/function.hpp>
 
@@ -22,10 +23,13 @@ class FilterLibrary {
 		boost::function<char* (void)> getFilterLibraryVendor;
 		boost::function<char* (void)> getFilterLibraryName;
 		boost::function<char* (void)> getFilterLibraryVersion;
+		boost::function<int (void)> getRegisteredFilterClassCount;
+		boost::function<char* (int)> getRegisteredFilterClassName;
 
 		std::string vendor;
 		std::string name;
 		std::string version;
+		std::vector<std::string> filterClassNames;
 
 		bool valid;
 
