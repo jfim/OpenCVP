@@ -4,7 +4,7 @@ import com.google.inject.Singleton;
 import net.guts.gui.action.GutsAction;
 
 /**
- * Document me!
+ * Actions pertaining to the movie playback.
  *
  * @author jfim
  */

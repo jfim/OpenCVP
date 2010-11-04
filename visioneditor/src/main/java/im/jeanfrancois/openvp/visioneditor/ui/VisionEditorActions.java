@@ -6,7 +6,7 @@ import net.guts.gui.action.GutsAction;
 import net.guts.gui.exit.ExitController;
 
 /**
- * Document me!
+ * Actions pertaining to the vision editor.
  *
  * @author jfim
  */
