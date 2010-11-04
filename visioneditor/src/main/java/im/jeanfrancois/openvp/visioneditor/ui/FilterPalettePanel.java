@@ -21,16 +21,18 @@ import java.awt.*;
 @Singleton
 public class FilterPalettePanel extends JPanel {
 	@Inject
-	public FilterPalettePanel(ExecutionModel executionModel) {
+	public FilterPalettePanel(ExecutionModel executionModel, ConsoleOutputer consoleOutputer) {
 		setLayout(new BorderLayout());
 
 		final JOutlookBar outlookBar = new JOutlookBar();
 
 		for (FilterLibrary filterLibrary : executionModel.getFilterLibraries()) {
 			String filterLibraryTitle = filterLibrary.getVendor() + " " + filterLibrary.getName() + " " + filterLibrary.getVersion();
+			consoleOutputer.outputLine("Found filter library " + filterLibraryTitle);
 
 			EventList<String> list = new BasicEventList<String>();
 			for (String filterClass : filterLibrary.getFilterClasses()) {
+				consoleOutputer.outputLine("Adding filter " + filterClass);
 				list.add(filterClass);
 			}
 
