@@ -5,6 +5,8 @@
 
 using namespace std;
 
+ExecutionModel* ExecutionModel::instance = 0;
+
 /* 
  * Look for all filter libraries
  * Load all filter libraries
@@ -22,4 +24,12 @@ ExecutionModel::~ExecutionModel() {}
 
 FilterChain* ExecutionModel::loadFilterChain(std::string path) {
 	return 0;
+}
+
+ExecutionModel& ExecutionModel::getInstance() {
+	if(instance == 0) {
+		instance = new ExecutionModel();
+	}
+
+	return *instance;
 }

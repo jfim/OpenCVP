@@ -14,12 +14,13 @@ class FilterChain;
  * execution.
  */
 class ExecutionModel {
-	public:
+	private:
 		ExecutionModel();
 		~ExecutionModel();
 
 	private:
 		std::vector<FilterLibrary> loadedFilterLibraries;
+		static ExecutionModel* instance;
 
 	public:
 		/**
@@ -27,9 +28,17 @@ class ExecutionModel {
 		 */
 		FilterChain* loadFilterChain(std::string path);
 
+		/**
+		 * Returns the list of loaded filter libraries.
+		 */
 		std::vector<FilterLibrary> getLoadedFilterLibraries() {
 			return loadedFilterLibraries;
 		}
+
+		/**
+		 * Returns the sole instance of the execution model.
+		 */
+		static ExecutionModel& getInstance();
 };
 
 #endif
