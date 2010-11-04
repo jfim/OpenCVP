@@ -34,6 +34,7 @@
     <orderEntry type="library" name="Maven: org.swinglabs:swingx:1.6" level="project" />
     <orderEntry type="library" name="Maven: com.jhlabs:filters:2.0.235" level="project" />
     <orderEntry type="library" name="Maven: org.swinglabs:swing-worker:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.nuiton.thirdparty:l2fprod-common:0.1" level="project" />
     <orderEntry type="module" module-name="visiontoolscommon" />
     <orderEntry type="module" module-name="javanativebridge" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:3.2.5" level="project" />

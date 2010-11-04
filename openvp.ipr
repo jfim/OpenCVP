@@ -501,6 +501,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/3.2.5/jna-3.2.5-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.nuiton.thirdparty:l2fprod-common:0.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/nuiton/thirdparty/l2fprod-common/0.1/l2fprod-common-0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/nuiton/thirdparty/l2fprod-common/0.1/l2fprod-common-0.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/nuiton/thirdparty/l2fprod-common/0.1/l2fprod-common-0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
   </component>
 </project>
 
