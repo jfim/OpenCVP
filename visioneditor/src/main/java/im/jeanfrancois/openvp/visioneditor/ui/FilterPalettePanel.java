@@ -30,7 +30,9 @@ public class FilterPalettePanel extends JPanel {
 			String filterLibraryTitle = filterLibrary.getVendor() + " " + filterLibrary.getName() + " " + filterLibrary.getVersion();
 
 			EventList<String> list = new BasicEventList<String>();
-			list.add("Dummy filter");
+			for (String filterClass : filterLibrary.getFilterClasses()) {
+				list.add(filterClass);
+			}
 
 			final JTable table = new JTable(new EventTableModel<String>(list, new TableFormat<String>() {
 				@Override
