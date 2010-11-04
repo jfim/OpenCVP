@@ -29,6 +29,7 @@ class FilterLibrary {
 		std::string vendor;
 		std::string name;
 		std::string version;
+		std::string libName;
 		std::vector<std::string> filterClassNames;
 
 		bool valid;
@@ -60,6 +61,20 @@ class FilterLibrary {
 		 */
 		const std::string getVersion() {
 			return version;
+		}
+
+		/**
+		 * Returns the library name of the filter library.
+		 */
+		const std::string getLibraryName() {
+			return libName;
+		}
+
+		/**
+		 * Returns the list of filter class names in this filter library.
+		 */
+		std::vector<std::string> getFilterClassNames() {
+			return filterClassNames;
 		}
 };
 

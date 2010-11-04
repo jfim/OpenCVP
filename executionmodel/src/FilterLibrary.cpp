@@ -3,7 +3,7 @@
 
 using namespace std;
 
-FilterLibrary::FilterLibrary(string libName) : library(libName) {
+FilterLibrary::FilterLibrary(string libName) : library(libName), libName(libName) {
 	// Open the library
 	if(!library.open()) {
 		cerr << "Failed to open library " << libName << endl;
