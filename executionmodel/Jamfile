@@ -4,4 +4,4 @@ project executionmodel
 		<library>/site-config//boost
 	;
 
-lib executionmodel : [ glob src/*.cpp ] : <link>dynamic ;
+lib executionmodel : [ glob src/*.cpp ] : <link>shared ;
