@@ -16,6 +16,14 @@
 		<module>javanativebridge</module>
 	</modules>
 
+	<repositories>
+		<repository>
+			<id>atlassian-public</id>
+			<name>Atlassian Public Repository</name>
+			<url>https://maven.atlassian.com/repository/public</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
