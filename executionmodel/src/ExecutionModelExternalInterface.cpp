@@ -29,7 +29,17 @@ BOOST_EXTENSION_EXPORT_DECL char* getFilterLibraryVersion(int index) {
 }
 
 BOOST_EXTENSION_EXPORT_DECL char* getFilterLibraryLibraryName(int index) {
-	// TODO Implement!
-	scratchBuffer[0] = '\0';
+	strncpy(scratchBuffer, ExecutionModel::getInstance().getLoadedFilterLibraries().at(index).getLibraryName().c_str(), SCRATCH_BUFFER_SIZE - 1);
+	scratchBuffer[SCRATCH_BUFFER_SIZE - 1] = '\0';
+	return scratchBuffer;
+}
+
+BOOST_EXTENSION_EXPORT_DECL int getRegisteredFilterClassCount(int libraryIndex) {
+	return ExecutionModel::getInstance().getLoadedFilterLibraries().at(libraryIndex).getFilterClassNames().size();
+}
+
+BOOST_EXTENSION_EXPORT_DECL char* getRegisteredFilterClassName(int libraryIndex, int filterClassIndex) {
+	strncpy(scratchBuffer, ExecutionModel::getInstance().getLoadedFilterLibraries().at(libraryIndex).getFilterClassNames().at(filterClassIndex).c_str(), SCRATCH_BUFFER_SIZE - 1);
+	scratchBuffer[SCRATCH_BUFFER_SIZE - 1] = '\0';
 	return scratchBuffer;
 }
