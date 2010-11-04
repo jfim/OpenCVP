@@ -5,8 +5,13 @@
 #include <boost/extension/shared_library.hpp>
 #include <boost/function.hpp>
 
+/**
+ * A filter library represents a dynamically loaded filter library that
+ * contains one or more filters.
+ */
 class FilterLibrary {
-	public:
+	friend class ExecutionModel;
+	private:
 		FilterLibrary(std::string libName);
 		~FilterLibrary();
 
@@ -23,18 +28,30 @@ class FilterLibrary {
 		bool valid;
 
 	public:
+		/**
+		 * Returns whether or not the library has been loaded successfully.
+		 */
 		bool isValid() {
 			return valid;
 		}
 
+		/**
+		 * Returns the vendor of the filter library.
+		 */
 		const std::string getVendor() {
 			return vendor;
 		}
 
+		/**
+		 * Returns the name of the filter library.
+		 */
 		const std::string getName() {
 			return name;
 		}
 
+		/**
+		 * Returns the version of the filter library
+		 */
 		const std::string getVersion() {
 			return version;
 		}

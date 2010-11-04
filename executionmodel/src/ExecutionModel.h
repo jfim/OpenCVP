@@ -6,12 +6,20 @@
 // TODO Remove this
 class FilterChain;
 
+/**
+ * The execution model provides a convenient facade for all functions exported
+ * by OpenVP, such as filter creation, filter chain loading/saving and
+ * execution.
+ */
 class ExecutionModel {
 	public:
 		ExecutionModel();
 		~ExecutionModel();
 
 	public:
+		/**
+		 * Loads a filter chain for a given path.
+		 */
 		FilterChain* loadFilterChain(std::string path);
 };
 
