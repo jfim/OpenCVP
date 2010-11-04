@@ -9,6 +9,9 @@
  */
 class OutputPort {
 	protected:
+		/**
+		 * Constructs and registers this output port in the filter.
+		 */
 		OutputPort(Filter* filter, std::string name);
 		virtual ~OutputPort();
 

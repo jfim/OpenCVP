@@ -9,6 +9,9 @@
  */
 class InputPort {
 	protected:
+		/**
+		 * Constructs and registers this input port in the filter.
+		 */
 		InputPort(Filter* filter, std::string name);
 		virtual ~InputPort();
 
