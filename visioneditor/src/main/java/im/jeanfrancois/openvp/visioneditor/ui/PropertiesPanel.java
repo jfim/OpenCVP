@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Document me!
+ * Properties pane for the currently selected object.
  *
  * @author jfim
  */
