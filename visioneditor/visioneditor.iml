@@ -38,6 +38,7 @@
     <orderEntry type="module" module-name="visiontoolscommon" />
     <orderEntry type="module" module-name="javanativebridge" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:3.2.5" level="project" />
+    <orderEntry type="library" name="Maven: net.sourceforge.collections:collections-generic:4.01" level="project" />
   </component>
 </module>
 

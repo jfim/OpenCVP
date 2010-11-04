@@ -512,6 +512,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/l2fprod/l2fprod-common-all/7.3/l2fprod-common-all-7.3-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: net.sourceforge.collections:collections-generic:4.01">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/collections/collections-generic/4.01/collections-generic-4.01.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/collections/collections-generic/4.01/collections-generic-4.01-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/collections/collections-generic/4.01/collections-generic-4.01-sources.jar!/" />
+      </SOURCES>
+    </library>
   </component>
 </project>
 
