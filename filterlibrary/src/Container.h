@@ -13,13 +13,13 @@ template <class T> class Container {
 	public:
 		~Container() {}
 	
-	private:
-		friend T;
-
+	public:
+		// TODO Add friend declaration to make this cleaner
 		void registerObject(T* object) {
 			objects.push_back(object);
 		}
 
+	private:
 		std::vector<T*> objects;
 
 	protected:
