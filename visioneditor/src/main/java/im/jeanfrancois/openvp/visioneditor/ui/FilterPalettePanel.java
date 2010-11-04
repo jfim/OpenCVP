@@ -14,7 +14,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Document me!
+ * Filter palette panel.
  *
  * @author jfim
  */
