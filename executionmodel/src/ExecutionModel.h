@@ -4,9 +4,7 @@
 #include <string>
 #include <vector>
 #include "FilterLibrary.h"
-
-// TODO Remove this
-class FilterChain;
+#include "FilterChain.h"
 
 /**
  * The execution model provides a convenient facade for all functions exported
