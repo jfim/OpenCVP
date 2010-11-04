@@ -34,6 +34,20 @@ class Filter {
 		 * Executes the filter.
 		 */
 		virtual void execute() = 0;
+
+		/**
+		 * Returns all input ports attached to this filter.
+		 */
+		std::vector<InputPort*> getInputPorts() {
+			return inputPorts;
+		}
+
+		/**
+		 * Returns all output ports attached to this filter.
+		 */
+		std::vector<OutputPort*> getOutputPorts() {
+			return outputPorts;
+		}
 };
 
 #endif
