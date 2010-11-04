@@ -1,5 +1,6 @@
 project :
 	requirements
+		<library>/site-config//opencv
 	:
 	usage-requirements
 		<include>src
