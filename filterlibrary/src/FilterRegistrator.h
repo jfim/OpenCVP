@@ -3,6 +3,9 @@
 
 #include "FilterFactory.h"
 
+/**
+ * Functor template object to register a given class to the filter factory.
+ */
 template <class T> class FilterRegistrator : public FilterConstructorFunctor {
 	public:
 		FilterRegistrator(std::string filterClassName) {
