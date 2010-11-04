@@ -1,12 +1,13 @@
 package im.jeanfrancois.openvp.visioneditor.ui;
 
+import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
 import javax.swing.*;
 import java.awt.*;
 
 /**
- * Document me!
+ * Console panel.
  *
  * @author jfim
  */
@@ -14,6 +15,7 @@ import java.awt.*;
 public class ConsolePanel extends JPanel implements ConsoleOutputer {
 	JTextArea textArea = new JTextArea();
 
+	@Inject
 	public ConsolePanel() {
 		setLayout(new BorderLayout());
 		JScrollPane scrollPane = new JScrollPane(textArea);
