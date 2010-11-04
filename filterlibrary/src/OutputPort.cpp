@@ -1,7 +1,7 @@
 #include "OutputPort.h"
 
-OutputPort::OutputPort(Filter* filter, std::string name) : name(name) {
-	filter->registerOutputPort(this);
+OutputPort::OutputPort(OutputPortContainer* portContainer, std::string name) : name(name) {
+	portContainer->registerOutputPort(this);
 }
 
 OutputPort::~OutputPort() {}

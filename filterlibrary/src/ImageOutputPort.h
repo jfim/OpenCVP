@@ -11,9 +11,9 @@
 class ImageOutputPort : public OutputPort {
 	public:
 		/**
-		 * Constructs an image output port for the given filter with the given port name.
+		 * Constructs an image output port with the given port name.
 		 */
-		ImageOutputPort(Filter* filter, std::string name);
+		ImageOutputPort(OutputPortContainer* portContainer, std::string name);
 		~ImageOutputPort();
 
 	private:

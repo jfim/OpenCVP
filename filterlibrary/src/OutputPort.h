@@ -4,8 +4,7 @@
 #include <string>
 #include "Filter.h"
 
-// Forward decl so that we don't need to define FilterChain in the filter library
-class FilterChain;
+class OutputPortContainer;
 
 /**
  * An output port to which a filter or filter chain writes.
@@ -13,14 +12,9 @@ class FilterChain;
 class OutputPort {
 	protected:
 		/**
-		 * Constructs and registers this output port in the filter.
+		 * Constructs and registers this output port.
 		 */
-		OutputPort(Filter* filter, std::string name);
-
-		/**
-		 * Constructs and registers this output port in the filter chain.
-		 */
-		OutputPort(FilterChain* filterChain, std::string name);
+		OutputPort(OutputPortContainer* portContainer, std::string name);
 
 		virtual ~OutputPort();
 

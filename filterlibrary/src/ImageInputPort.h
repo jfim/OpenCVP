@@ -11,9 +11,9 @@
 class ImageInputPort : public InputPort {
 	public:
 		/**
-		 * Constructs an image input port for the given filter with the given port name.
+		 * Constructs an image input port with the given port name.
 		 */
-		ImageInputPort(Filter* filter, std::string name);
+		ImageInputPort(InputPortContainer* portContainer, std::string name);
 		~ImageInputPort();
 
 	private:

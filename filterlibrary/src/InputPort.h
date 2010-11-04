@@ -4,8 +4,7 @@
 #include <string>
 #include "Filter.h"
 
-// Forward decl so that we don't need to define FilterChain in the filter library
-class FilterChain;
+class InputPortContainer;
 
 /**
  * An input port from which a filter or filter chain reads data.
@@ -15,12 +14,7 @@ class InputPort {
 		/**
 		 * Constructs and registers this input port in the filter.
 		 */
-		InputPort(Filter* filter, std::string name);
-
-		/**
-		 * Constructs and registers this input port in the filter chain.
-		 */
-		InputPort(FilterChain* filterChain, std::string name);
+		InputPort(InputPortContainer* portContainer, std::string name);
 
 		virtual ~InputPort();
 

@@ -4,14 +4,17 @@
 #include <string>
 #include <vector>
 
-class InputPort;
-class OutputPort;
+#include "InputPortContainer.h"
+#include "OutputPortContainer.h"
+
+class InputPortContainer;
+class OutputPortContainer;
 
 /**
  * A self-contained unit that represents a function applied to its input
  * port(s) and writes the result to its output port(s).
  */
-class Filter {
+class Filter : public InputPortContainer, public OutputPortContainer {
 	protected:
 		/**
 		 * Constructs the filter with the given filter name.
@@ -19,35 +22,11 @@ class Filter {
 		Filter(std::string filterName);
 		virtual ~Filter();
 
-	private:
-		friend class InputPort;
-		friend class OutputPort;
-
-		void registerInputPort(InputPort* inputPort);
-		void registerOutputPort(OutputPort* outputPort);
-
-		std::vector<InputPort*> inputPorts;
-		std::vector<OutputPort*> outputPorts;
-
 	public:
 		/**
 		 * Executes the filter.
 		 */
 		virtual void execute() = 0;
-
-		/**
-		 * Returns all input ports attached to this filter.
-		 */
-		std::vector<InputPort*> getInputPorts() {
-			return inputPorts;
-		}
-
-		/**
-		 * Returns all output ports attached to this filter.
-		 */
-		std::vector<OutputPort*> getOutputPorts() {
-			return outputPorts;
-		}
 };
 
 #endif
