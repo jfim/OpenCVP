@@ -21,6 +21,11 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>im.jeanfrancois.openvp</groupId>
+			<artifactId>javanativebridge</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 
 	<properties>

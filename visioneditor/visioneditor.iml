@@ -35,6 +35,7 @@
     <orderEntry type="library" name="Maven: com.jhlabs:filters:2.0.235" level="project" />
     <orderEntry type="library" name="Maven: org.swinglabs:swing-worker:1.1" level="project" />
     <orderEntry type="module" module-name="visiontoolscommon" />
+    <orderEntry type="module" module-name="javanativebridge" />
   </component>
 </module>
 
