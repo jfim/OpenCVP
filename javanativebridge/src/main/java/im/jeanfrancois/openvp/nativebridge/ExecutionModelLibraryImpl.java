@@ -3,7 +3,7 @@ package im.jeanfrancois.openvp.nativebridge;
 import com.sun.jna.Native;
 
 /**
- * Document me!
+ * JNA native library interface implementation.
  *
  * @author jfim
  */

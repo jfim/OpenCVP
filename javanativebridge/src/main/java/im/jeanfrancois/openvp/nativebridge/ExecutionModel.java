@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Document me!
+ * Facade for OpenVP.
  *
  * @author jfim
  */
@@ -16,11 +16,16 @@ public class ExecutionModel {
 
 		// Load all info for the filter libraries
 		int filterLibraryCount = executionModelLibrary.getFilterLibraryCount();
-		for(int i = 0; i < filterLibraryCount; ++i) {
+		for (int i = 0; i < filterLibraryCount; ++i) {
 			filterLibraries.add(new FilterLibrary(i, executionModelLibrary));
 		}
 	}
 
+	/**
+	 * Obtains the list of filter libraries.
+	 *
+	 * @return The list of filter libraries.
+	 */
 	public List<FilterLibrary> getFilterLibraries() {
 		return filterLibraries;
 	}

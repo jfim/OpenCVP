@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Document me!
+ * Object representation of a filter library.
  *
  * @author jfim
  */
