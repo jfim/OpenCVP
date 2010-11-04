@@ -4,7 +4,8 @@
 DemoFilter::DemoFilter(std::string filterName) :
 	Filter(filterName),
 	inPort(this, "in"),
-	outPort(this, "out") {}
+	outPort(this, "out"),
+	myProperty(this, "property", 1, 10, 5) {}
 
 DemoFilter::~DemoFilter() {}
 

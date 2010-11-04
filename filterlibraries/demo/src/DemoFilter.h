@@ -4,6 +4,7 @@
 #include "Filter.h"
 #include "ImageInputPort.h"
 #include "ImageOutputPort.h"
+#include "IntProperty.h"
 
 class DemoFilter : public Filter {
 	public:
@@ -13,6 +14,7 @@ class DemoFilter : public Filter {
 	private:
 		ImageInputPort inPort;
 		ImageOutputPort outPort;
+		IntProperty myProperty;
 
 	public:
 		void execute();
