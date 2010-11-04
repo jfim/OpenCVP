@@ -8,11 +8,17 @@
  */
 template <class T> class FilterRegistrator : public FilterConstructorFunctor {
 	public:
+		/**
+		 * Registers class T to the filter factory.
+		 */
 		FilterRegistrator(std::string filterClassName) {
 			FilterFactory::getInstance().registerFilterClass(filterClassName, this);
 		}
 
 	public:
+		/**
+		 * Creates a new instance of T.
+		 */
 		virtual Filter* const operator()(std::string filterName) {
 			return new T(filterName);
 		}
