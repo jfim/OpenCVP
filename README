@@ -1,1 +1,18 @@
 OpenVP: The Open Vision Platform
+
+Designed to be:
+	Fast
+		Using C++ and multiple worker threads to distribute the load as equally
+		as possible among all cores/processors
+
+	Embeddable
+		A simple interface is exposed to allow embedding OpenVP in all kinds of
+		applications
+
+	Community-oriented
+		The filter library-oriented architecture encourages reuse and sharing
+		of filters and components
+
+	An experimentation platform
+		A vast library of filters allows rapid prototyping and experimentation
+		of new algorithms and approaches to solve a given problem
