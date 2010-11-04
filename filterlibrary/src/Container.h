@@ -3,6 +3,9 @@
 
 #include <vector>
 
+/**
+ * A container for objects.
+ */
 template <class T> class Container {
 	protected:
 		Container() {}

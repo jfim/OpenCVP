@@ -5,8 +5,14 @@
 
 class PropertyContainer;
 
+/**
+ * An editable property for an object.
+ */
 class Property {
 	protected:
+		/**
+		 * Constructs and registers a property.
+		 */
 		Property(PropertyContainer* container, std::string name);
 
 	public:
@@ -16,6 +22,9 @@ class Property {
 		std::string name;
 
 	public:
+		/**
+		 * Returns the property name.
+		 */
 		std::string getName() {
 			return name;
 		}

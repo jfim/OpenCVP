@@ -6,6 +6,9 @@
 
 class OutputPort;
 
+/**
+ * A container for output ports.
+ */
 class OutputPortContainer : public Container<OutputPort> {
 	protected:
 		OutputPortContainer() {}
