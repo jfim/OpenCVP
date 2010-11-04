@@ -1,6 +1,8 @@
 #ifndef CONTAINER_H_34908129048132094809123849012384098123094812
 #define CONTAINER_H_34908129048132094809123849012384098123094812
 
+#include <vector>
+
 template <class T> class Container {
 	protected:
 		Container() {}
