@@ -8,7 +8,7 @@ import net.guts.gui.docking.LayoutInitializer;
 import net.guts.gui.docking.ViewFactory;
 
 /**
- * Document me!
+ * Default layout initializer for the vision editor.
  *
  * @author jfim
  */
