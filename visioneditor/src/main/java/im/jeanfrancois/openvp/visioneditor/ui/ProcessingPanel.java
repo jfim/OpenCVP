@@ -7,7 +7,7 @@ import im.jeanfrancois.openvp.nativebridge.ExecutionModel;
 import javax.swing.*;
 
 /**
- * Document me!
+ * Processing panel which contains a thumbnail view of the filter processing.
  *
  * @author jfim
  */
