@@ -4,6 +4,9 @@
 #include <string>
 #include "Filter.h"
 
+/**
+ * An output port to which a filter writes to.
+ */
 class OutputPort {
 	protected:
 		OutputPort(Filter* filter, std::string name);

@@ -4,6 +4,9 @@
 #include <string>
 #include "Filter.h"
 
+/**
+ * An input port from which a filter reads data from.
+ */
 class InputPort {
 	protected:
 		InputPort(Filter* filter, std::string name);
@@ -13,6 +16,9 @@ class InputPort {
 		std::string name;
 
 	public:
+		/**
+		 * Returns the name of the port.
+		 */
 		std::string getName() {
 			return name;
 		}
