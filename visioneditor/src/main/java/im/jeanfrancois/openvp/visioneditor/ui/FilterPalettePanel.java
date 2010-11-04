@@ -1,5 +1,9 @@
 package im.jeanfrancois.openvp.visioneditor.ui;
 
+import ca.odell.glazedlists.BasicEventList;
+import ca.odell.glazedlists.EventList;
+import ca.odell.glazedlists.gui.TableFormat;
+import ca.odell.glazedlists.swing.EventTableModel;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.l2fprod.common.swing.JOutlookBar;
@@ -24,7 +28,31 @@ public class FilterPalettePanel extends JPanel {
 
 		for (FilterLibrary filterLibrary : executionModel.getFilterLibraries()) {
 			String filterLibraryTitle = filterLibrary.getVendor() + " " + filterLibrary.getName() + " " + filterLibrary.getVersion();
-			outlookBar.add(filterLibraryTitle, new JTable());
+
+			EventList<String> list = new BasicEventList<String>();
+			list.add("Dummy filter");
+
+			final JTable table = new JTable(new EventTableModel<String>(list, new TableFormat<String>() {
+				@Override
+				public int getColumnCount() {
+					return 1;
+				}
+
+				@Override
+				public String getColumnName(int i) {
+					return "Name";
+				}
+
+				@Override
+				public Object getColumnValue(String s, int i) {
+					return s;
+				}
+			}));
+
+			table.setFillsViewportHeight(true);
+			table.setShowGrid(false);
+
+			outlookBar.add(filterLibraryTitle, table);
 		}
 
 		add(outlookBar);
