@@ -13,6 +13,8 @@ class FilterLibrary {
 	friend class ExecutionModel;
 	private:
 		FilterLibrary(std::string libName);
+
+	public:
 		~FilterLibrary();
 
 	private:
