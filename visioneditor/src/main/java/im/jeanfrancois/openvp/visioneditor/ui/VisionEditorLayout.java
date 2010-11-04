@@ -41,5 +41,10 @@ public class VisionEditorLayout implements LayoutInitializer {
 		control.add(processing);
 		processing.setLocation(base.normalEast(0.25).south(0.5));
 		processing.setVisible(true);
+
+		SingleCDockable filterPalette = factory.createSingle("FilterPalettePanel");
+		control.add(filterPalette);
+		filterPalette.setLocation(base.normalEast(0.25));
+		filterPalette.setVisible(true);
 	}
 }
