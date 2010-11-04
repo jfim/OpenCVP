@@ -5,8 +5,14 @@
 #include <cv.hpp>
 #include "InputPort.h"
 
+/**
+ * An input port for images.
+ */
 class ImageInputPort : public InputPort {
 	public:
+		/**
+		 * Constructs an image input port for the given filter with the given port name.
+		 */
 		ImageInputPort(Filter* filter, std::string name);
 		~ImageInputPort();
 
@@ -14,10 +20,16 @@ class ImageInputPort : public InputPort {
 		cv::Mat* image;
 
 	public:
+		/**
+		 * Returns the image contained in this input port.
+		 */
 		cv::Mat* getImage() {
 			return image;
 		}
 
+		/**
+		 * Sets the image contained in this input port.
+		 */
 		void setImage(cv::Mat* newImage) {
 			image = newImage;
 		}

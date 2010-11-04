@@ -5,8 +5,14 @@
 #include <cv.hpp>
 #include "OutputPort.h"
 
+/**
+ * An output port for images.
+ */
 class ImageOutputPort : public OutputPort {
 	public:
+		/**
+		 * Constructs an image output port for the given filter with the given port name.
+		 */
 		ImageOutputPort(Filter* filter, std::string name);
 		~ImageOutputPort();
 
@@ -14,10 +20,16 @@ class ImageOutputPort : public OutputPort {
 		cv::Mat* image;
 
 	public:
+		/**
+		 * Returns the image contained in this output port.
+		 */
 		cv::Mat* getImage() {
 			return image;
 		}
 
+		/**
+		 * Sets the image contained in this output port.
+		 */
 		void setImage(cv::Mat* newImage) {
 			image = newImage;
 		}
