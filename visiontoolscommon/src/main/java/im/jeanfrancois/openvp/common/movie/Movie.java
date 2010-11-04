@@ -6,4 +6,5 @@ package im.jeanfrancois.openvp.common.movie;
  * @author jfim
  */
 public interface Movie {
+	public int getFrameCount();
 }
