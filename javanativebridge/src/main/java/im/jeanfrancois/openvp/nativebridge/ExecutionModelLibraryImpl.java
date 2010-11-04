@@ -34,4 +34,14 @@ class ExecutionModelLibraryImpl implements ExecutionModelLibrary {
 	public String getFilterLibraryLibraryName(int index) {
 		return IMPLEMENTATION.getFilterLibraryLibraryName(index);
 	}
+
+	@Override
+	public int getRegisteredFilterClassCount(int libraryIndex) {
+		return IMPLEMENTATION.getRegisteredFilterClassCount(libraryIndex);
+	}
+
+	@Override
+	public String getRegisteredFilterClassName(int libraryIndex, int filterClassIndex) {
+		return IMPLEMENTATION.getRegisteredFilterClassName(libraryIndex, filterClassIndex);
+	}
 }

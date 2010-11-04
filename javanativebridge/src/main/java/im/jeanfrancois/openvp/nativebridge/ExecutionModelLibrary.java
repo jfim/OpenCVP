@@ -9,8 +9,10 @@ import com.sun.jna.Library;
  */
 interface ExecutionModelLibrary extends Library {
 	int getFilterLibraryCount();
-	String getFilterLibraryVendor(int index);
-	String getFilterLibraryName(int index);
-	String getFilterLibraryVersion(int index);
-	String getFilterLibraryLibraryName(int index);
+	String getFilterLibraryVendor(int libraryIndex);
+	String getFilterLibraryName(int libraryIndex);
+	String getFilterLibraryVersion(int libraryIndex);
+	String getFilterLibraryLibraryName(int libraryIndex);
+	int getRegisteredFilterClassCount(int libraryIndex);
+	String getRegisteredFilterClassName(int libraryIndex, int filterClassIndex);
 }
