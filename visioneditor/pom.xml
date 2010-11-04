@@ -19,15 +19,21 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>guts-snapshot</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-	</repositories>
+    <repositories>
+    <repository>
+        <id>sonatype-oss-maven</id>
+        <name>Sonatype OSS Maven Repository for Staging Snapshots</name>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        <releases>
+                <enabled>false</enabled>
+        </releases>
+        <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+        </snapshots>
+    </repository>
+    </repositories>
 
 	<dependencies>
 		<dependency>
@@ -61,12 +67,17 @@
 			<groupId>net.guts</groupId>
 			<artifactId>guts-gui-ex-docking-frames-common</artifactId>
 			<version>0.1.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>jgraphx</groupId>
-			<artifactId>jgraphx</artifactId>
-			<version>1.4.2.1</version>
-		</dependency>
+        </dependency>
+
+        <!-- http://stackoverflow.com/questions/2588502/maven-assembly-plugin-doesnt-add-dependencies-with-system-scope-->
+        <dependency>
+          <groupId>jgraphx</groupId>
+          <artifactId>jgraphx</artifactId>
+          <version>1.4.2.1</version>
+          <scope>system</scope>
+          <systemPath>${project.basedir}/lib/jgraphx.jar</systemPath>
+        </dependency>
+
 		<dependency>
 			<groupId>org.dockingframes</groupId>
 			<artifactId>docking-frames-common</artifactId>
@@ -85,7 +96,9 @@
 		<dependency>
 			<groupId>com.l2fprod</groupId>
 			<artifactId>l2fprod-common-all</artifactId>
-			<version>7.3</version>
+            <version>7.3</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/l2fprod-common-all-7.3.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>im.jeanfrancois.openvp</groupId>
