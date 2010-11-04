@@ -180,6 +180,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/javanativebridge/javanativebridge.iml" filepath="$PROJECT_DIR$/javanativebridge/javanativebridge.iml" />
       <module fileurl="file://$PROJECT_DIR$/openvp.iml" filepath="$PROJECT_DIR$/openvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/visioneditor/visioneditor.iml" filepath="$PROJECT_DIR$/visioneditor/visioneditor.iml" />
       <module fileurl="file://$PROJECT_DIR$/visiontoolscommon/visiontoolscommon.iml" filepath="$PROJECT_DIR$/visiontoolscommon/visiontoolscommon.iml" />
