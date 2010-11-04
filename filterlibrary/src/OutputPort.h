@@ -16,6 +16,9 @@ class OutputPort {
 		std::string name;
 
 	public:
+		/**
+		 * Returns the name of the port.
+		 */
 		std::string getName() {
 			return name;
 		}
