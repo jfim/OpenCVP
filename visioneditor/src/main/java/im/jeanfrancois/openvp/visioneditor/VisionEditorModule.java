@@ -1,6 +1,8 @@
 package im.jeanfrancois.openvp.visioneditor;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.Scopes;
+import im.jeanfrancois.openvp.nativebridge.ExecutionModel;
 import im.jeanfrancois.openvp.visioneditor.i18n.Localizer;
 import im.jeanfrancois.openvp.visioneditor.ui.*;
 import net.guts.gui.application.AppLifecycleStarter;
@@ -17,6 +19,7 @@ public class VisionEditorModule extends AbstractModule {
 	protected void configure() {
 		bind(AppLifecycleStarter.class).to(VisionEditorAppLifecycleStarter.class);
 		bind(ConsoleOutputer.class).to(ConsolePanel.class);
+		bind(ExecutionModel.class).in(Scopes.SINGLETON);
 
 		Resources.bindRootBundle(binder(), Localizer.class, "visioneditor");
 
