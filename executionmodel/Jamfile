@@ -2,6 +2,7 @@ project executionmodel
 	:
 	requirements
 		<library>/site-config//boost
+		<library>/openvp//filterlibrary
 	;
 
 lib executionmodel : [ glob src/*.cpp ] : <link>shared ;
