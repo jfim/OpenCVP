@@ -5,7 +5,7 @@ import com.google.inject.Singleton;
 import net.guts.gui.action.GutsAction;
 
 /**
- * Document me!
+ * UI actions pertaining to the graph editor.
  *
  * @author jfim
  */

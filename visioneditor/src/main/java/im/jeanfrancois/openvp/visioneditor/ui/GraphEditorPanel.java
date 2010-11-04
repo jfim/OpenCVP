@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Document me!
+ * Graph editor panel.
  *
  * @author jfim
  */
