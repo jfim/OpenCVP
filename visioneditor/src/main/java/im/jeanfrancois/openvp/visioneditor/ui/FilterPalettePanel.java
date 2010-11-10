@@ -55,6 +55,7 @@ public class FilterPalettePanel extends JPanel {
 
 			table.setFillsViewportHeight(true);
 			table.setShowGrid(false);
+			table.setDragEnabled(true);
 
 			outlookBar.add(filterLibraryTitle, table);
 		}
