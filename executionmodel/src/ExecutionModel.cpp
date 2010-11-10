@@ -22,7 +22,7 @@ ExecutionModel::ExecutionModel() {
 ExecutionModel::~ExecutionModel() {}
 
 FilterChainPtr ExecutionModel::loadFilterChain(std::string path) {
-	return 0;
+	return FilterChainPtr();
 }
 
 ExecutionModel& ExecutionModel::getInstance() {
