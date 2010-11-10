@@ -1,4 +1,14 @@
-OpenVP: The Open Vision Platform
+OpenCVP: The Open Computer Vision Platform
+
+OpenCVP builds upon OpenCV to make writing computer vision applications easier
+than ever!
+
+It features a visual WYSIWYG editor to build computer vision applications and
+features an easily embeddable interface to add computer vision to other
+applications.
+
+Furthermore, it is licensed under the very permissive BSD license, so that it
+can be used in all kinds of applications.
 
 Designed to be:
 	Fast
@@ -6,12 +16,12 @@ Designed to be:
 		as possible among all cores/processors
 
 	Embeddable
-		A simple interface is exposed to allow embedding OpenVP in all kinds of
-		applications
+		A simple interface is exposed to allow embedding OpenCVP in all kinds
+		of applications
 
 	Community-oriented
 		The filter library-oriented architecture encourages reuse and sharing
-		of filters and components
+		of filters and components with the community
 
 	An experimentation platform
 		A vast library of filters allows rapid prototyping and experimentation
