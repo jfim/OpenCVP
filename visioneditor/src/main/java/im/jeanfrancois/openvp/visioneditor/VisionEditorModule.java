@@ -2,6 +2,8 @@ package im.jeanfrancois.openvp.visioneditor;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Scopes;
+import im.jeanfrancois.openvp.common.ui.ExceptionDisplayer;
+import im.jeanfrancois.openvp.common.ui.JXErrorPaneExceptionDisplayer;
 import im.jeanfrancois.openvp.nativebridge.ExecutionModel;
 import im.jeanfrancois.openvp.visioneditor.i18n.Localizer;
 import im.jeanfrancois.openvp.visioneditor.ui.*;
@@ -20,6 +22,7 @@ public class VisionEditorModule extends AbstractModule {
 		bind(AppLifecycleStarter.class).to(VisionEditorAppLifecycleStarter.class);
 		bind(ConsoleOutputer.class).to(ConsolePanel.class);
 		bind(ExecutionModel.class).in(Scopes.SINGLETON);
+		bind(ExceptionDisplayer.class).to(JXErrorPaneExceptionDisplayer.class);
 
 		Resources.bindRootBundle(binder(), Localizer.class, "visioneditor");
 
