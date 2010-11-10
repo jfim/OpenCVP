@@ -8,7 +8,7 @@
 
 /**
  * The execution model provides a convenient facade for all functions exported
- * by OpenVP, such as filter creation, filter chain loading/saving and
+ * by OpenCVP, such as filter creation, filter chain loading/saving and
  * execution.
  */
 class ExecutionModel {

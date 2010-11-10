@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Facade for OpenVP.
+ * Facade for OpenCVP.
  *
  * @author jfim
  */
