@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<artifactId>openvp</artifactId>
-		<groupId>im.jeanfrancois.openvp</groupId>
+		<artifactId>opencvp</artifactId>
+		<groupId>im.jeanfrancois.opencvp</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	
-	<groupId>im.jeanfrancois.openvp</groupId>
+	<groupId>im.jeanfrancois.opencvp</groupId>
 	<artifactId>visioneditor</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -91,7 +91,7 @@
             <systemPath>${project.basedir}/lib/l2fprod-common-all-7.3.jar</systemPath>
 		</dependency>
 		<dependency>
-			<groupId>im.jeanfrancois.openvp</groupId>
+			<groupId>im.jeanfrancois.opencvp</groupId>
 			<artifactId>visiontoolscommon</artifactId>
 			<version>${project.version}</version>
 		</dependency>
@@ -106,7 +106,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>im.jeanfrancois.openvp.visioneditor.App</mainClass>
+							<mainClass>im.jeanfrancois.opencvp.visioneditor.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

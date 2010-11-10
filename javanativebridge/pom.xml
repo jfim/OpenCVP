@@ -4,15 +4,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>openvp</artifactId>
-		<groupId>im.jeanfrancois.openvp</groupId>
+		<artifactId>opencvp</artifactId>
+		<groupId>im.jeanfrancois.opencvp</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>im.jeanfrancois.openvp</groupId>
+	<groupId>im.jeanfrancois.opencvp</groupId>
 	<artifactId>javanativebridge</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>OpenVP Java-Native Bridge</name>
+	<name>OpenCVP Java-Native Bridge</name>
 
 	<dependencies>
 		<dependency>

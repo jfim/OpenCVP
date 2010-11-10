@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>im.jeanfrancois.openvp</groupId>
-	<artifactId>openvp</artifactId>
+	<groupId>im.jeanfrancois.opencvp</groupId>
+	<artifactId>opencvp</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>OpenVP</name>
+	<name>OpenCVP</name>
 
 	<modules>
 		<module>visioneditor</module>
