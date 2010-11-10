@@ -21,7 +21,7 @@ ExecutionModel::ExecutionModel() {
 
 ExecutionModel::~ExecutionModel() {}
 
-FilterChain* ExecutionModel::loadFilterChain(std::string path) {
+FilterChainPtr ExecutionModel::loadFilterChain(std::string path) {
 	return 0;
 }
 
