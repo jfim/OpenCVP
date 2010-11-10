@@ -21,7 +21,7 @@ import java.awt.dnd.DropTargetDropEvent;
 @Singleton
 public class GraphEditorPanel extends JPanel {
 	@Inject
-	public GraphEditorPanel(VisionGraph graph) {
+	public GraphEditorPanel(VisionGraph graph, final ConsoleOutputer consoleOutputer) {
 		setLayout(new BorderLayout());
 		
 		graph.setAllowDanglingEdges(false);
@@ -47,8 +47,9 @@ public class GraphEditorPanel extends JPanel {
 			public void drop(DropTargetDropEvent dtde) {
 				dtde.acceptDrop(DnDConstants.ACTION_COPY_OR_MOVE);
 				Transferable transferable = dtde.getTransferable();
+				consoleOutputer.outputLine("Completed drag and drop!");
 				for (DataFlavor dataFlavor : transferable.getTransferDataFlavors()) {
-					System.out.println("dataFlavor = " + dataFlavor);
+					consoleOutputer.outputLine("dataFlavor = " + dataFlavor);
 				}
 				dtde.dropComplete(true);
 			}
