@@ -3,8 +3,11 @@
 
 #include <string>
 #include <vector>
+#include <boost/shared_ptr.hpp>
 #include "FilterLibrary.h"
 #include "FilterChain.h"
+
+typedef boost::shared_ptr<FilterChain> FilterChainPtr;
 
 /**
  * The execution model provides a convenient facade for all functions exported
@@ -22,9 +25,14 @@ class ExecutionModel {
 
 	public:
 		/**
+		 * Creates a new empty filter chain.
+		 */
+		FilterChainPtr createFilterChain();
+
+		/**
 		 * Loads a filter chain for a given path.
 		 */
-		FilterChain* loadFilterChain(std::string path);
+		FilterChainPtr loadFilterChain(std::string path);
 
 		/**
 		 * Returns the list of loaded filter libraries.
