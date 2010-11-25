@@ -3,6 +3,8 @@
 
 #include <boost/extension/extension.hpp>
 
+class Filter;
+
 extern "C" {
 	/**
 	 * Returns the vendor of the filter library(eg. Jean-Francois Im or FooCorp)
@@ -28,6 +30,11 @@ extern "C" {
 	 * Returns the name of a registered filter class for a given index.
 	 */
 	BOOST_EXTENSION_EXPORT_DECL char* getRegisteredFilterClassName(int index);
+
+	/**
+	 * Builds an instance of a registered filter class.
+	 */
+	BOOST_EXTENSION_EXPORT_DECL Filter* buildFilter(const char* filterClassName, const char* filterName);
 };
 
 #endif

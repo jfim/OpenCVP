@@ -29,3 +29,9 @@ BOOST_EXTENSION_EXPORT_DECL char* getRegisteredFilterClassName(int index) {
 	scratchBuffer[SCRATCH_BUFFER_SIZE - 1] = '\0';
 	return scratchBuffer;
 }
+
+BOOST_EXTENSION_EXPORT_DECL Filter* buildFilter(const char* filterClassName, const char* filterName) {
+	std::string className(filterClassName);
+	std::string name(filterName);
+	return FilterFactory::getInstance().buildFilter(className, name);
+}
