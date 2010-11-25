@@ -22,8 +22,17 @@ ExecutionModel::ExecutionModel() {
 
 ExecutionModel::~ExecutionModel() {}
 
+FilterChainPtr ExecutionModel::createFilterChain() {
+	return FilterChainPtr(new FilterChain());
+}
+
 FilterChainPtr ExecutionModel::loadFilterChain(std::string path) {
+	// TODO Implement!
 	return FilterChainPtr();
+}
+
+void ExecutionModel::saveFilterChain(FilterChainPtr filterChain, std::string path) {
+	// TODO Implement!
 }
 
 ExecutionModel& ExecutionModel::getInstance() {
