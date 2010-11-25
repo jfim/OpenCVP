@@ -1,0 +1,10 @@
+project opencvp-java
+	:
+	requirements
+		<library>/site-config//boost
+		<library>/site-config//jni
+		<library>/openvp//filterlibrary
+		<library>/openvp//executionmodel
+	;
+
+lib opencvp-java : [ glob src/main/c++/*.cxx ] : <link>shared ;
