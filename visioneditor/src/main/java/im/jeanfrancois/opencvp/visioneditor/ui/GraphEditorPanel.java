@@ -6,12 +6,6 @@ import com.mxgraph.swing.mxGraphComponent;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.Transferable;
-import java.awt.dnd.DnDConstants;
-import java.awt.dnd.DropTarget;
-import java.awt.dnd.DropTargetAdapter;
-import java.awt.dnd.DropTargetDropEvent;
 
 /**
  * Graph editor panel.
@@ -42,7 +36,7 @@ public class GraphEditorPanel extends JPanel {
 		comp.setBorder(BorderFactory.createEmptyBorder());
 		add(comp, BorderLayout.CENTER);
 
-		new DropTarget(comp, new DropTargetAdapter() {
+		/* new DropTarget(comp, new DropTargetAdapter() {
 			@Override
 			public void drop(DropTargetDropEvent dtde) {
 				dtde.acceptDrop(DnDConstants.ACTION_COPY_OR_MOVE);
@@ -53,6 +47,6 @@ public class GraphEditorPanel extends JPanel {
 				}
 				dtde.dropComplete(true);
 			}
-		});
+		});*/
 	}
 }
