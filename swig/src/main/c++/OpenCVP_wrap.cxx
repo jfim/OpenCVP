@@ -843,7 +843,9 @@ jdoubleArray SWIG_JavaArrayOutDouble (JNIEnv *jenv, double *result, jsize sz) {
 
 
 #include "InputPort.h"
+#include "ImageInputPort.h"
 #include "OutputPort.h"
+#include "ImageOutputPort.h"
 #include "Property.h"
 #include "Container.h"
 #include "ExecutionModel.h"
@@ -1801,6 +1803,16 @@ SWIGEXPORT jstring JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal
 }
 
 
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1ImageInputPort(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ImageInputPort *arg1 = (ImageInputPort *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ImageInputPort **)&jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT jstring JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPort_1getName(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   OutputPort *arg1 = (OutputPort *) 0 ;
@@ -1813,6 +1825,16 @@ SWIGEXPORT jstring JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal
   result = (arg1)->getName();
   jresult = jenv->NewStringUTF((&result)->c_str()); 
   return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1ImageOutputPort(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  ImageOutputPort *arg1 = (ImageOutputPort *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(ImageOutputPort **)&jarg1; 
+  delete arg1;
 }
 
 
@@ -2500,6 +2522,22 @@ SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_o
   return jresult;
 }
 
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_ImageInputPort_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+    jlong baseptr = 0;
+    (void)jenv;
+    (void)jcls;
+    *(InputPort **)&baseptr = *(ImageInputPort **)&jarg1;
+    return baseptr;
+}
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_ImageOutputPort_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+    jlong baseptr = 0;
+    (void)jenv;
+    (void)jcls;
+    *(OutputPort **)&baseptr = *(ImageOutputPort **)&jarg1;
+    return baseptr;
+}
 
 #ifdef __cplusplus
 }

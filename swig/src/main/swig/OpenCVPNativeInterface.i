@@ -10,7 +10,9 @@
 
 %{
 #include "InputPort.h"
+#include "ImageInputPort.h"
 #include "OutputPort.h"
+#include "ImageOutputPort.h"
 #include "Property.h"
 #include "Container.h"
 #include "ExecutionModel.h"
@@ -30,7 +32,9 @@ namespace std {
 %shared_ptr(FilterChain)
 
 %include "InputPort.h"
+%include "ImageInputPort.h"
 %include "OutputPort.h"
+%include "ImageOutputPort.h"
 %include "Property.h"
 %include "Container.h"
 %include "ExecutionModel.h"

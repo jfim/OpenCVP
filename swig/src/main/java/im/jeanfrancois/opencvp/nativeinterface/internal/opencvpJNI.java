@@ -65,7 +65,9 @@ public class opencvpJNI {
   public final static native void PropertyVector_set(long jarg1, PropertyVector jarg1_, int jarg2, long jarg3, Property jarg3_);
   public final static native void delete_PropertyVector(long jarg1);
   public final static native String InputPort_getName(long jarg1, InputPort jarg1_);
+  public final static native void delete_ImageInputPort(long jarg1);
   public final static native String OutputPort_getName(long jarg1, OutputPort jarg1_);
+  public final static native void delete_ImageOutputPort(long jarg1);
   public final static native void delete_Property(long jarg1);
   public final static native String Property_getName(long jarg1, Property jarg1_);
   public final static native int IMAGE_DATA_TYPE_8UC1_get();
@@ -116,4 +118,6 @@ public class opencvpJNI {
   public final static native long Filter_getInputPorts(long jarg1, Filter jarg1_);
   public final static native long Filter_getOutputPorts(long jarg1, Filter jarg1_);
   public final static native long Filter_getProperties(long jarg1, Filter jarg1_);
+  public final static native long ImageInputPort_SWIGUpcast(long jarg1);
+  public final static native long ImageOutputPort_SWIGUpcast(long jarg1);
 }
