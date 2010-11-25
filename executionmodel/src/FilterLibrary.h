@@ -6,6 +6,8 @@
 #include <boost/extension/shared_library.hpp>
 #include <boost/function.hpp>
 
+#include "Filter.h"
+
 /**
  * A filter library represents a dynamically loaded filter library that
  * contains one or more filters.
@@ -25,6 +27,7 @@ class FilterLibrary {
 		boost::function<char* (void)> getFilterLibraryVersion;
 		boost::function<int (void)> getRegisteredFilterClassCount;
 		boost::function<char* (int)> getRegisteredFilterClassName;
+		boost::function<Filter* (const char*, const char*)> buildFilterFunc;
 
 		std::string vendor;
 		std::string name;
@@ -75,6 +78,13 @@ class FilterLibrary {
 		 */
 		std::vector<std::string> getFilterClassNames() {
 			return filterClassNames;
+		}
+
+		/**
+		 * Builds an instance of a filter given a class name and filter name.
+		 */
+		Filter* buildFilter(const std::string filterClassName, const std::string filterName) {
+			return buildFilterFunc(filterClassName.c_str(), filterName.c_str());
 		}
 };
 

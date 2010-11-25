@@ -17,8 +17,9 @@ FilterLibrary::FilterLibrary(std::string libName) : library(libName), libName(li
 	getFilterLibraryVersion = library.get<char*>("getFilterLibraryVersion");
 	getRegisteredFilterClassCount = library.get<int>("getRegisteredFilterClassCount");
 	getRegisteredFilterClassName = library.get<char*, int>("getRegisteredFilterClassName");
+	buildFilterFunc = library.get<Filter*, const char*, const char*>("buildFilter");
 
-	if(!getFilterLibraryVendor || !getFilterLibraryName || !getFilterLibraryVersion || !getRegisteredFilterClassCount || !getRegisteredFilterClassName) {
+	if(!getFilterLibraryVendor || !getFilterLibraryName || !getFilterLibraryVersion || !getRegisteredFilterClassCount || !getRegisteredFilterClassName || !buildFilterFunc) {
 		cerr << "Library " << libName << " does not export all required functions" << endl;
 		valid = false;
 		return;
