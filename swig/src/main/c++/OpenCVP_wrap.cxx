@@ -869,7 +869,52 @@ SWIGINTERN void std_vector_Sl_FilterLibrary_Sg__set(std::vector< FilterLibrary >
                 else
                     throw std::out_of_range("vector index out of range");
             }
+SWIGINTERN std::vector< InputPort * >::const_reference std_vector_Sl_InputPort_Sm__Sg__get(std::vector< InputPort * > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_InputPort_Sm__Sg__set(std::vector< InputPort * > *self,int i,std::vector< InputPort * >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< OutputPort * >::const_reference std_vector_Sl_OutputPort_Sm__Sg__get(std::vector< OutputPort * > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_OutputPort_Sm__Sg__set(std::vector< OutputPort * > *self,int i,std::vector< OutputPort * >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< Property * >::const_reference std_vector_Sl_Property_Sm__Sg__get(std::vector< Property * > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_Property_Sm__Sg__set(std::vector< Property * > *self,int i,std::vector< Property * >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
 
+#include "InputPort.h"
+#include "OutputPort.h"
+#include "Property.h"
 #include "Container.h"
 #include "ExecutionModel.h"
 #include "FilterLibrary.h"
@@ -1232,6 +1277,571 @@ SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_op
   (void)jcls;
   arg1 = *(std::vector< FilterLibrary > **)&jarg1; 
   delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_new_1InputPortPtrVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< InputPort * > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< InputPort * > *)new std::vector< InputPort * >();
+  *(std::vector< InputPort * > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_new_1InputPortPtrVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< InputPort * >::size_type arg1 ;
+  std::vector< InputPort * > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< InputPort * >::size_type)jarg1; 
+  result = (std::vector< InputPort * > *)new std::vector< InputPort * >(arg1);
+  *(std::vector< InputPort * > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortPtrVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  std::vector< InputPort * >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  result = ((std::vector< InputPort * > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortPtrVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  std::vector< InputPort * >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  result = ((std::vector< InputPort * > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortPtrVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  std::vector< InputPort * >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  arg2 = (std::vector< InputPort * >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortPtrVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  result = (bool)((std::vector< InputPort * > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortPtrVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortPtrVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  std::vector< InputPort * >::value_type *arg2 = 0 ;
+  std::vector< InputPort * >::value_type temp2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  temp2 = *(std::vector< InputPort * >::value_type *)&jarg2;
+  arg2 = (std::vector< InputPort * >::value_type *)&temp2; 
+  (arg1)->push_back((std::vector< InputPort * >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortPtrVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  int arg2 ;
+  std::vector< InputPort * >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< InputPort * >::value_type *) &std_vector_Sl_InputPort_Sm__Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< InputPort * >::value_type *)&jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortPtrVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  int arg2 ;
+  std::vector< InputPort * >::value_type *arg3 = 0 ;
+  std::vector< InputPort * >::value_type temp3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = *(std::vector< InputPort * >::value_type *)&jarg3;
+  arg3 = (std::vector< InputPort * >::value_type *)&temp3; 
+  try {
+    std_vector_Sl_InputPort_Sm__Sg__set(arg1,arg2,(InputPort *const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1InputPortPtrVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< InputPort * > *arg1 = (std::vector< InputPort * > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< InputPort * > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_new_1OutputPortPtrVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< OutputPort * > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< OutputPort * > *)new std::vector< OutputPort * >();
+  *(std::vector< OutputPort * > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_new_1OutputPortPtrVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< OutputPort * >::size_type arg1 ;
+  std::vector< OutputPort * > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< OutputPort * >::size_type)jarg1; 
+  result = (std::vector< OutputPort * > *)new std::vector< OutputPort * >(arg1);
+  *(std::vector< OutputPort * > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortPtrVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  std::vector< OutputPort * >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  result = ((std::vector< OutputPort * > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortPtrVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  std::vector< OutputPort * >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  result = ((std::vector< OutputPort * > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortPtrVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  std::vector< OutputPort * >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  arg2 = (std::vector< OutputPort * >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortPtrVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  result = (bool)((std::vector< OutputPort * > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortPtrVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortPtrVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  std::vector< OutputPort * >::value_type *arg2 = 0 ;
+  std::vector< OutputPort * >::value_type temp2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  temp2 = *(std::vector< OutputPort * >::value_type *)&jarg2;
+  arg2 = (std::vector< OutputPort * >::value_type *)&temp2; 
+  (arg1)->push_back((std::vector< OutputPort * >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortPtrVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  int arg2 ;
+  std::vector< OutputPort * >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< OutputPort * >::value_type *) &std_vector_Sl_OutputPort_Sm__Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< OutputPort * >::value_type *)&jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortPtrVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  int arg2 ;
+  std::vector< OutputPort * >::value_type *arg3 = 0 ;
+  std::vector< OutputPort * >::value_type temp3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = *(std::vector< OutputPort * >::value_type *)&jarg3;
+  arg3 = (std::vector< OutputPort * >::value_type *)&temp3; 
+  try {
+    std_vector_Sl_OutputPort_Sm__Sg__set(arg1,arg2,(OutputPort *const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1OutputPortPtrVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< OutputPort * > *arg1 = (std::vector< OutputPort * > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< OutputPort * > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_new_1PropertyPtrVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< Property * > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< Property * > *)new std::vector< Property * >();
+  *(std::vector< Property * > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_new_1PropertyPtrVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< Property * >::size_type arg1 ;
+  std::vector< Property * > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< Property * >::size_type)jarg1; 
+  result = (std::vector< Property * > *)new std::vector< Property * >(arg1);
+  *(std::vector< Property * > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_PropertyPtrVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  std::vector< Property * >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  result = ((std::vector< Property * > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_PropertyPtrVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  std::vector< Property * >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  result = ((std::vector< Property * > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_PropertyPtrVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  std::vector< Property * >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  arg2 = (std::vector< Property * >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_PropertyPtrVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  result = (bool)((std::vector< Property * > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_PropertyPtrVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_PropertyPtrVector_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  std::vector< Property * >::value_type *arg2 = 0 ;
+  std::vector< Property * >::value_type temp2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  temp2 = *(std::vector< Property * >::value_type *)&jarg2;
+  arg2 = (std::vector< Property * >::value_type *)&temp2; 
+  (arg1)->push_back((std::vector< Property * >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_PropertyPtrVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  int arg2 ;
+  std::vector< Property * >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< Property * >::value_type *) &std_vector_Sl_Property_Sm__Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< Property * >::value_type *)&jresult = *result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_PropertyPtrVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  int arg2 ;
+  std::vector< Property * >::value_type *arg3 = 0 ;
+  std::vector< Property * >::value_type temp3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  temp3 = *(std::vector< Property * >::value_type *)&jarg3;
+  arg3 = (std::vector< Property * >::value_type *)&temp3; 
+  try {
+    std_vector_Sl_Property_Sm__Sg__set(arg1,arg2,(Property *const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1PropertyPtrVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< Property * > *arg1 = (std::vector< Property * > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< Property * > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPort_1getName(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  InputPort *arg1 = (InputPort *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(InputPort **)&jarg1; 
+  result = (arg1)->getName();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPort_1getName(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  OutputPort *arg1 = (OutputPort *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(OutputPort **)&jarg1; 
+  result = (arg1)->getName();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1Property(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  Property *arg1 = (Property *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(Property **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_Property_1getName(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  Property *arg1 = (Property *) 0 ;
+  std::string result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Property **)&jarg1; 
+  result = (arg1)->getName();
+  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  return jresult;
 }
 
 
@@ -1943,6 +2553,51 @@ SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_op
   (void)jarg1_;
   arg1 = *(Filter **)&jarg1; 
   (arg1)->execute();
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_Filter_1getInputPorts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Filter *arg1 = (Filter *) 0 ;
+  std::vector< InputPort * > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Filter **)&jarg1; 
+  result = (arg1)->getInputPorts();
+  *(std::vector< InputPort * > **)&jresult = new std::vector< InputPort * >((const std::vector< InputPort * > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_Filter_1getOutputPorts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Filter *arg1 = (Filter *) 0 ;
+  std::vector< OutputPort * > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Filter **)&jarg1; 
+  result = (arg1)->getOutputPorts();
+  *(std::vector< OutputPort * > **)&jresult = new std::vector< OutputPort * >((const std::vector< OutputPort * > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_Filter_1getProperties(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Filter *arg1 = (Filter *) 0 ;
+  std::vector< Property * > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Filter **)&jarg1; 
+  result = (arg1)->getProperties();
+  *(std::vector< Property * > **)&jresult = new std::vector< Property * >((const std::vector< Property * > &)result); 
+  return jresult;
 }
 
 

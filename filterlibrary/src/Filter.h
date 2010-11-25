@@ -29,6 +29,33 @@ class Filter : public InputPortContainer, public OutputPortContainer, public Pro
 		 * Executes the filter.
 		 */
 		virtual void execute() = 0;
+
+		/**
+		 * Obtains the list of input ports. The member was pulled down to
+		 * simplify foreign function interfaces for languages which do not
+		 * support multiple inheritance.
+		 */
+		std::vector<InputPort*> getInputPorts() {
+			return InputPortContainer::getInputPorts();
+		}
+
+		/**
+		 * Obtains the list of output ports. The member was pulled down to
+		 * simplify foreign function interfaces for languages which do not
+		 * support multiple inheritance.
+		 */
+		std::vector<OutputPort*> getOutputPorts() {
+			return OutputPortContainer::getOutputPorts();
+		}
+
+		/**
+		 * Obtains the list of properties. The member was pulled down to
+		 * simplify foreign function interfaces for languages which do not
+		 * support multiple inheritance.
+		 */
+		std::vector<Property*> getProperties() {
+			return PropertyContainer::getProperties();
+		}
 };
 
 #endif

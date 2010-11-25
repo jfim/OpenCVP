@@ -11,11 +11,17 @@
 namespace std {
     %template(StringVector) vector<string>;
     %template(FilterLibraryVector) vector<FilterLibrary>;
+    %template(InputPortPtrVector) vector<InputPort*>;
+    %template(OutputPortPtrVector) vector<OutputPort*>;
+    %template(PropertyPtrVector) vector<Property*>;
 }
 
 %shared_ptr(FilterChain)
 
 %{
+#include "InputPort.h"
+#include "OutputPort.h"
+#include "Property.h"
 #include "Container.h"
 #include "ExecutionModel.h"
 #include "FilterLibrary.h"
@@ -23,6 +29,9 @@ namespace std {
 #include "Filter.h"
 %}
 
+%include "InputPort.h"
+%include "OutputPort.h"
+%include "Property.h"
 %include "Container.h"
 %include "ExecutionModel.h"
 %include "FilterLibrary.h"

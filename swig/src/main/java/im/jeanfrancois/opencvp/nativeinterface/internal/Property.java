@@ -8,43 +8,35 @@
 
 package im.jeanfrancois.opencvp.nativeinterface.internal;
 
-public class Filter {
+public class Property {
   private long swigCPtr;
   protected boolean swigCMemOwn;
 
-  public Filter(long cPtr, boolean cMemoryOwn) {
+  public Property(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  public static long getCPtr(Filter obj) {
+  public static long getCPtr(Property obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
+  }
+
+  protected void finalize() {
+    delete();
   }
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        throw new UnsupportedOperationException("C++ destructor does not have public access");
+        opencvpJNI.delete_Property(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public void execute() {
-    opencvpJNI.Filter_execute(swigCPtr, this);
-  }
-
-  public InputPortPtrVector getInputPorts() {
-    return new InputPortPtrVector(opencvpJNI.Filter_getInputPorts(swigCPtr, this), true);
-  }
-
-  public OutputPortPtrVector getOutputPorts() {
-    return new OutputPortPtrVector(opencvpJNI.Filter_getOutputPorts(swigCPtr, this), true);
-  }
-
-  public PropertyPtrVector getProperties() {
-    return new PropertyPtrVector(opencvpJNI.Filter_getProperties(swigCPtr, this), true);
+  public String getName() {
+    return opencvpJNI.Property_getName(swigCPtr, this);
   }
 
 }
