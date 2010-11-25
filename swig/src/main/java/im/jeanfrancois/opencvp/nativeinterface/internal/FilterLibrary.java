@@ -59,4 +59,9 @@ public class FilterLibrary {
     return new StringVector(opencvpJNI.FilterLibrary_getFilterClassNames(swigCPtr, this), true);
   }
 
+  public Filter buildFilter(String filterClassName, String filterName) {
+    long cPtr = opencvpJNI.FilterLibrary_buildFilter(swigCPtr, this, filterClassName, filterName);
+    return (cPtr == 0) ? null : new Filter(cPtr, false);
+  }
+
 }

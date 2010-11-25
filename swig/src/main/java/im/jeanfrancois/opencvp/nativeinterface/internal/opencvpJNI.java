@@ -114,6 +114,7 @@ public class opencvpJNI {
   public final static native String FilterLibrary_getVersion(long jarg1, FilterLibrary jarg1_);
   public final static native String FilterLibrary_getLibraryName(long jarg1, FilterLibrary jarg1_);
   public final static native long FilterLibrary_getFilterClassNames(long jarg1, FilterLibrary jarg1_);
+  public final static native long FilterLibrary_buildFilter(long jarg1, FilterLibrary jarg1_, String jarg2, String jarg3);
   public final static native void delete_FilterChain(long jarg1);
   public final static native void FilterChain_addFilter(long jarg1, FilterChain jarg1_, long jarg2, Filter jarg2_);
   public final static native void FilterChain_execute(long jarg1, FilterChain jarg1_);

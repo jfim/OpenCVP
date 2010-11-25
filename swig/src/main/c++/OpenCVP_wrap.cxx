@@ -2501,6 +2501,39 @@ SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_o
 }
 
 
+SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_FilterLibrary_1buildFilter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+  jlong jresult = 0 ;
+  FilterLibrary *arg1 = (FilterLibrary *) 0 ;
+  std::string arg2 ;
+  std::string arg3 ;
+  Filter *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(FilterLibrary **)&jarg1; 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null std::string");
+    return 0;
+  } 
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return 0;
+  (&arg2)->assign(arg2_pstr);
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  if(!jarg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null std::string");
+    return 0;
+  } 
+  const char *arg3_pstr = (const char *)jenv->GetStringUTFChars(jarg3, 0); 
+  if (!arg3_pstr) return 0;
+  (&arg3)->assign(arg3_pstr);
+  jenv->ReleaseStringUTFChars(jarg3, arg3_pstr); 
+  result = (Filter *)(arg1)->buildFilter(arg2,arg3);
+  *(Filter **)&jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1FilterChain(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   FilterChain *arg1 = (FilterChain *) 0 ;
   boost::shared_ptr< FilterChain > *smartarg1 = 0 ;
