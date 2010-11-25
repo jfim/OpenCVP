@@ -7,7 +7,7 @@
 
 class DoubleProperty : public NumericProperty<double> {
 	public:
-		IntProperty(PropertyContainer* container, std::string name, double minValue, double maxValue, double defaultValue) : NumericProperty<double>(container, name, minValue, maxValue, defaultValue) {}
+		DoubleProperty(PropertyContainer* container, std::string name, double minValue, double maxValue, double defaultValue) : NumericProperty<double>(container, name, minValue, maxValue, defaultValue) {}
 };
 
 #endif
