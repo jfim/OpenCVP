@@ -76,36 +76,6 @@ class ExecutionModel {
 		void saveFilterChain(FilterChainPtr filterChain, std::string path);
 
 		/**
-		 * Obtains the number of input ports for the given filter chain.
-		 */
-		int getFilterChainInputPortCount(FilterChainPtr filterChain);
-
-		/**
-		 * Obtains the number of output ports for a given filter chain.
-		 */
-		int getFilterChainOutputPortCount(FilterChainPtr filterChain);
-
-		/**
-		 * Obtains the type of an input port for a given filter chain.
-		 */
-		PortType getFilterChainInputPortType(FilterChainPtr filterChain, int portIndex);
-
-		/**
-		 * Obtains the type of an output port for a given filter chain.
-		 */
-		PortType getFilterChainOutputPortType(FilterChainPtr filterChain, int portIndex);
-
-		/**
-		 * Sets the data for an input port.
-		 */
-		void setFilterChainImageInputPortData(FilterChainPtr filterChain, int portIndex, int width, int height, ImageDataType dataType, unsigned char data[]);
-
-		/**
-		 * Executes a filter chain.
-		 */
-		void executeFilterChain(FilterChainPtr filterChain);
-
-		/**
 		 * Returns the list of loaded filter libraries.
 		 */
 		std::vector<FilterLibrary*> getLoadedFilterLibraries() {
