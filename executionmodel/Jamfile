@@ -9,3 +9,4 @@ project executionmodel
 	;
 
 lib executionmodel : [ glob src/*.cpp ] : <link>shared ;
+lib executionmodel-static : [ glob src/*.cpp ] : <link>static ;
