@@ -9,6 +9,42 @@
 
 typedef boost::shared_ptr<FilterChain> FilterChainPtr;
 
+enum PortType {
+	PORT_TYPE_IMAGE,
+	PORT_TYPE_COUNT
+};
+
+enum ImageDataType {
+	IMAGE_DATA_TYPE_8UC1 = CV_8UC1,
+	IMAGE_DATA_TYPE_8UC2 = CV_8UC2,
+	IMAGE_DATA_TYPE_8UC3 = CV_8UC3,
+	IMAGE_DATA_TYPE_8UC4 = CV_8UC4,
+	IMAGE_DATA_TYPE_8SC1 = CV_8SC1,
+	IMAGE_DATA_TYPE_8SC2 = CV_8SC2,
+	IMAGE_DATA_TYPE_8SC3 = CV_8SC3,
+	IMAGE_DATA_TYPE_8SC4 = CV_8SC4,
+	IMAGE_DATA_TYPE_16UC1 = CV_16UC1,
+	IMAGE_DATA_TYPE_16UC2 = CV_16UC2,
+	IMAGE_DATA_TYPE_16UC3 = CV_16UC3,
+	IMAGE_DATA_TYPE_16UC4 = CV_16UC4,
+	IMAGE_DATA_TYPE_16SC1 = CV_16SC1,
+	IMAGE_DATA_TYPE_16SC2 = CV_16SC2,
+	IMAGE_DATA_TYPE_16SC3 = CV_16SC3,
+	IMAGE_DATA_TYPE_16SC4 = CV_16SC4,
+	IMAGE_DATA_TYPE_32SC1 = CV_32SC1,
+	IMAGE_DATA_TYPE_32SC2 = CV_32SC2,
+	IMAGE_DATA_TYPE_32SC3 = CV_32SC3,
+	IMAGE_DATA_TYPE_32SC4 = CV_32SC4,
+	IMAGE_DATA_TYPE_32FC1 = CV_32FC1,
+	IMAGE_DATA_TYPE_32FC2 = CV_32FC2,
+	IMAGE_DATA_TYPE_32FC3 = CV_32FC3,
+	IMAGE_DATA_TYPE_32FC4 = CV_32FC4,
+	IMAGE_DATA_TYPE_64FC1 = CV_64FC1,
+	IMAGE_DATA_TYPE_64FC2 = CV_64FC2,
+	IMAGE_DATA_TYPE_64FC3 = CV_64FC3,
+	IMAGE_DATA_TYPE_64FC4 = CV_64FC4,
+};
+
 /**
  * The execution model provides a convenient facade for all functions exported
  * by OpenCVP, such as filter creation, filter chain loading/saving and
@@ -33,6 +69,41 @@ class ExecutionModel {
 		 * Loads a filter chain for a given path.
 		 */
 		FilterChainPtr loadFilterChain(std::string path);
+
+		/**
+		 * Saves a filter chain to disk.
+		 */
+		void saveFilterChain(FilterChainPtr filterChain, std::string path);
+
+		/**
+		 * Obtains the number of input ports for the given filter chain.
+		 */
+		int getFilterChainInputPortCount(FilterChainPtr filterChain);
+
+		/**
+		 * Obtains the number of output ports for a given filter chain.
+		 */
+		int getFilterChainOutputPortCount(FilterChainPtr filterChain);
+
+		/**
+		 * Obtains the type of an input port for a given filter chain.
+		 */
+		PortType getFilterChainInputPortType(FilterChainPtr filterChain, int portIndex);
+
+		/**
+		 * Obtains the type of an output port for a given filter chain.
+		 */
+		PortType getFilterChainOutputPortType(FilterChainPtr filterChain, int portIndex);
+
+		/**
+		 * Sets the data for an input port.
+		 */
+		void setFilterChainImageInputPortData(FilterChainPtr filterChain, int portIndex, int width, int height, ImageDataType dataType, unsigned char data[]);
+
+		/**
+		 * Executes a filter chain.
+		 */
+		void executeFilterChain(FilterChainPtr filterChain);
 
 		/**
 		 * Returns the list of loaded filter libraries.

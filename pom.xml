@@ -14,6 +14,7 @@
 		<module>visioneditor</module>
 		<module>visiontoolscommon</module>
 		<module>javanativebridge</module>
+		<module>swig</module>
 	</modules>
 
 	<repositories>
