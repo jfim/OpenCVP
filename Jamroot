@@ -7,5 +7,6 @@ use-project /filterlibrary : filterlibrary ;
 build-project filterlibrary ;
 build-project executionmodel ;
 build-project filterlibraries ;
+build-project swig ;
 
-install dist : filterlibraries executionmodel : <install-dependencies>on <install-type>EXE <install-type>LIB ;
+install dist : filterlibraries executionmodel swig : <install-dependencies>on <install-type>EXE <install-type>LIB ;
