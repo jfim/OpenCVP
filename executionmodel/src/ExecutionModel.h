@@ -56,7 +56,7 @@ class ExecutionModel {
 		~ExecutionModel();
 
 	private:
-		std::vector<FilterLibrary> loadedFilterLibraries;
+		std::vector<FilterLibrary*> loadedFilterLibraries;
 		static ExecutionModel* instance;
 
 	public:
@@ -108,7 +108,7 @@ class ExecutionModel {
 		/**
 		 * Returns the list of loaded filter libraries.
 		 */
-		std::vector<FilterLibrary> getLoadedFilterLibraries() {
+		std::vector<FilterLibrary*> getLoadedFilterLibraries() {
 			return loadedFilterLibraries;
 		}
 

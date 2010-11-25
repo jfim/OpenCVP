@@ -14,8 +14,8 @@ ExecutionModel* ExecutionModel::instance = 0;
  */
 ExecutionModel::ExecutionModel() {
 	// TODO Look for filters instead of loading a hardcoded one
-	FilterLibrary filterLibrary("demo.dll");
-	if(filterLibrary.isValid()) {
+	FilterLibrary* filterLibrary = new FilterLibrary("demo.dll");
+	if(filterLibrary->isValid()) {
 		loadedFilterLibraries.push_back(filterLibrary);
 	}
 }
