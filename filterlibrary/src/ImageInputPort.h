@@ -17,20 +17,20 @@ class ImageInputPort : public InputPort {
 		~ImageInputPort();
 
 	private:
-		cv::Mat* image;
+		cv::Mat image;
 
 	public:
 		/**
 		 * Returns the image contained in this input port.
 		 */
-		cv::Mat* getImage() {
+		cv::Mat getImage() {
 			return image;
 		}
 
 		/**
 		 * Sets the image contained in this input port.
 		 */
-		void setImage(cv::Mat* newImage) {
+		void setImage(cv::Mat newImage) {
 			image = newImage;
 		}
 };
