@@ -14,7 +14,7 @@ template <class T> class Container {
 		~Container() {}
 	
 	public:
-		// TODO Add friend declaration to make this cleaner
+		// TODO Figure out how to have a template friend declaration with g++ so that we can make this protected again
 		void registerObject(T* object) {
 			objects.push_back(object);
 		}
