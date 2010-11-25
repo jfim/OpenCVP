@@ -15,6 +15,9 @@ template <class T> class Container {
 	
 	public:
 		// TODO Figure out how to have a template friend declaration with g++ so that we can make this protected again
+		/**
+		 * Registers an object into the container.
+		 */
 		void registerObject(T* object) {
 			objects.push_back(object);
 		}

@@ -28,11 +28,18 @@ class FilterChain : public InputPortContainer, public OutputPortContainer {
 
 	public:
 		~FilterChain();
+
+		/**
+		 * Adds a filter to the filter chain.
+		 */
 		void addFilter(Filter* filter) {
 			filters.push_back(filter);
 		}
 
 	public:
+		/**
+		 * Executes the filter chain.
+		 */
 		void execute();
 };
 

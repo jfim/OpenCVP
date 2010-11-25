@@ -5,8 +5,14 @@
 #include "Property.h"
 #include "NumericProperty.h"
 
+/**
+ * Property that can hold integer values.
+ */
 class IntProperty : public NumericProperty<int> {
 	public:
+		/**
+		 * Builds an integer property.
+		 */
 		IntProperty(PropertyContainer* container, std::string name, int minValue, int maxValue, int defaultValue) : NumericProperty<int>(container, name, minValue, maxValue, defaultValue) {}
 };
 

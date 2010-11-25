@@ -5,8 +5,14 @@
 #include "Property.h"
 #include "NumericProperty.h"
 
+/**
+ * A property that contains double precision floating point values.
+ */
 class DoubleProperty : public NumericProperty<double> {
 	public:
+		/**
+		 * Builds a double precision floating point property.
+		 */
 		DoubleProperty(PropertyContainer* container, std::string name, double minValue, double maxValue, double defaultValue) : NumericProperty<double>(container, name, minValue, maxValue, defaultValue) {}
 };
 
