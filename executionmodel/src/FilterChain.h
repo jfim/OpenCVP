@@ -6,6 +6,8 @@
 #include "OutputPort.h"
 #include "InputPortContainer.h"
 #include "OutputPortContainer.h"
+#include "ImageInputPort.h"
+#include "ImageOutputPort.h"
 
 /**
  * A group of filters connected together that make up a computer vision
@@ -15,10 +17,21 @@ class FilterChain : public InputPortContainer, public OutputPortContainer {
 	friend class ExecutionModel;
 
 	private:
+		ImageInputPort inPort;
+		ImageOutputPort outPort;
+		std::vector<Filter*> filters;
+
+	private:
 		FilterChain();
 
 	public:
 		~FilterChain();
+		void addFilter(Filter* filter) {
+			filters.push_back(filter);
+		}
+
+	public:
+		void execute();
 };
 
 #endif

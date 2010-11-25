@@ -1,4 +1,6 @@
 #include "FilterChain.h"
 
-FilterChain::FilterChain() {}
+FilterChain::FilterChain() :
+	inPort(this, "in"),
+	outPort(this, "out") {}
 FilterChain::~FilterChain() {}
