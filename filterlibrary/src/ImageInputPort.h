@@ -10,16 +10,19 @@
  */
 class ImageInputPort : public InputPort {
 	public:
+#ifndef SWIG
 		/**
 		 * Constructs an image input port with the given port name.
 		 */
 		ImageInputPort(InputPortContainer* portContainer, std::string name);
+#endif
 		~ImageInputPort();
 
 	private:
 		cv::Mat image;
 
 	public:
+#ifndef SWIG
 		/**
 		 * Returns the image contained in this input port.
 		 */
@@ -33,6 +36,7 @@ class ImageInputPort : public InputPort {
 		void setImage(cv::Mat newImage) {
 			image = newImage;
 		}
+#endif
 };
 
 #endif

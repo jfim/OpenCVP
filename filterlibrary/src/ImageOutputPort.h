@@ -10,16 +10,19 @@
  */
 class ImageOutputPort : public OutputPort {
 	public:
+#ifndef SWIG
 		/**
 		 * Constructs an image output port with the given port name.
 		 */
 		ImageOutputPort(OutputPortContainer* portContainer, std::string name);
+#endif
 		~ImageOutputPort();
 
 	private:
 		cv::Mat image;
 
 	public:
+#ifndef SWIG
 		/**
 		 * Returns the image contained in this output port.
 		 */
@@ -41,6 +44,7 @@ class ImageOutputPort : public OutputPort {
 		void ensureSizeAndType(cv::Size size, int type) {
 			image.create(size, type);
 		}
+#endif
 };
 
 #endif
