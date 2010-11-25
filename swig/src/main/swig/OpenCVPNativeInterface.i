@@ -17,8 +17,6 @@ namespace std {
 
 %{
 #include "Container.h"
-#include "InputPortContainer.h"
-#include "OutputPortContainer.h"
 #include "ExecutionModel.h"
 #include "FilterLibrary.h"
 #include "FilterChain.h"
@@ -26,8 +24,6 @@ namespace std {
 %}
 
 %include "Container.h"
-%include "InputPortContainer.h"
-%include "OutputPortContainer.h"
 %include "ExecutionModel.h"
 %include "FilterLibrary.h"
 %include "FilterChain.h"

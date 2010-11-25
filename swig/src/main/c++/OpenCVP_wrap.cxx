@@ -871,8 +871,6 @@ SWIGINTERN void std_vector_Sl_FilterLibrary_Sg__set(std::vector< FilterLibrary >
             }
 
 #include "Container.h"
-#include "InputPortContainer.h"
-#include "OutputPortContainer.h"
 #include "ExecutionModel.h"
 #include "FilterLibrary.h"
 #include "FilterChain.h"
@@ -1234,56 +1232,6 @@ SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_op
   (void)jcls;
   arg1 = *(std::vector< FilterLibrary > **)&jarg1; 
   delete arg1;
-}
-
-
-SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1InputPortContainer(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  InputPortContainer *arg1 = (InputPortContainer *) 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(InputPortContainer **)&jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_InputPortContainer_1getInputPorts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
-  InputPortContainer *arg1 = (InputPortContainer *) 0 ;
-  SwigValueWrapper< std::vector< InputPort * > > result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(InputPortContainer **)&jarg1; 
-  result = (arg1)->getInputPorts();
-  *(std::vector< InputPort * > **)&jresult = new std::vector< InputPort * >((const std::vector< InputPort * > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_delete_1OutputPortContainer(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  OutputPortContainer *arg1 = (OutputPortContainer *) 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(OutputPortContainer **)&jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_OutputPortContainer_1getOutputPorts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
-  OutputPortContainer *arg1 = (OutputPortContainer *) 0 ;
-  SwigValueWrapper< std::vector< OutputPort * > > result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(OutputPortContainer **)&jarg1; 
-  result = (arg1)->getOutputPorts();
-  *(std::vector< OutputPort * > **)&jresult = new std::vector< OutputPort * >((const std::vector< OutputPort * > &)result); 
-  return jresult;
 }
 
 
@@ -1997,25 +1945,6 @@ SWIGEXPORT void JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_op
   (arg1)->execute();
 }
 
-
-SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_FilterChain_1SWIGSmartPtrUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-    jlong baseptr = 0;
-    boost::shared_ptr< FilterChain > *argp1;
-    boost::shared_ptr< InputPortContainer > result;
-    (void)jenv;
-    (void)jcls;
-    argp1 = *(boost::shared_ptr< FilterChain > **)&jarg1;
-    *(boost::shared_ptr< InputPortContainer > **)&baseptr = argp1 ? new boost::shared_ptr< InputPortContainer >(*argp1) : 0;
-    return baseptr;
-}
-
-SWIGEXPORT jlong JNICALL Java_im_jeanfrancois_opencvp_nativeinterface_internal_opencvpJNI_Filter_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-    jlong baseptr = 0;
-    (void)jenv;
-    (void)jcls;
-    *(InputPortContainer **)&baseptr = *(Filter **)&jarg1;
-    return baseptr;
-}
 
 #ifdef __cplusplus
 }

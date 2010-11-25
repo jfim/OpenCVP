@@ -31,10 +31,6 @@ public class opencvpJNI {
   public final static native long FilterLibraryVector_get(long jarg1, FilterLibraryVector jarg1_, int jarg2);
   public final static native void FilterLibraryVector_set(long jarg1, FilterLibraryVector jarg1_, int jarg2, long jarg3, FilterLibrary jarg3_);
   public final static native void delete_FilterLibraryVector(long jarg1);
-  public final static native void delete_InputPortContainer(long jarg1);
-  public final static native long InputPortContainer_getInputPorts(long jarg1, InputPortContainer jarg1_);
-  public final static native void delete_OutputPortContainer(long jarg1);
-  public final static native long OutputPortContainer_getOutputPorts(long jarg1, OutputPortContainer jarg1_);
   public final static native int IMAGE_DATA_TYPE_8UC1_get();
   public final static native int IMAGE_DATA_TYPE_8UC2_get();
   public final static native int IMAGE_DATA_TYPE_8UC3_get();
@@ -85,6 +81,4 @@ public class opencvpJNI {
   public final static native void FilterChain_addFilter(long jarg1, FilterChain jarg1_, long jarg2, Filter jarg2_);
   public final static native void FilterChain_execute(long jarg1, FilterChain jarg1_);
   public final static native void Filter_execute(long jarg1, Filter jarg1_);
-  public final static native long FilterChain_SWIGSmartPtrUpcast(long jarg1);
-  public final static native long Filter_SWIGUpcast(long jarg1);
 }

@@ -8,13 +8,12 @@
 
 package im.jeanfrancois.opencvp.nativeinterface.internal;
 
-public class FilterChain extends InputPortContainer {
+public class FilterChain {
   private long swigCPtr;
-  private boolean swigCMemOwnDerived;
+  private boolean swigCMemOwnBase;
 
   public FilterChain(long cPtr, boolean cMemoryOwn) {
-    super(opencvpJNI.FilterChain_SWIGSmartPtrUpcast(cPtr), true);
-    swigCMemOwnDerived = cMemoryOwn;
+    swigCMemOwnBase = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
@@ -28,13 +27,12 @@ public class FilterChain extends InputPortContainer {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwnDerived) {
-        swigCMemOwnDerived = false;
+      if (swigCMemOwnBase) {
+        swigCMemOwnBase = false;
         opencvpJNI.delete_FilterChain(swigCPtr);
       }
       swigCPtr = 0;
     }
-    super.delete();
   }
 
   public void addFilter(Filter filter) {
