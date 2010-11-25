@@ -99,12 +99,6 @@ public class opencvpJNI {
   public final static native long ExecutionModel_createFilterChain(long jarg1, ExecutionModel jarg1_);
   public final static native long ExecutionModel_loadFilterChain(long jarg1, ExecutionModel jarg1_, String jarg2);
   public final static native void ExecutionModel_saveFilterChain(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_, String jarg3);
-  public final static native int ExecutionModel_getFilterChainInputPortCount(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_);
-  public final static native int ExecutionModel_getFilterChainOutputPortCount(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_);
-  public final static native int ExecutionModel_getFilterChainInputPortType(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_, int jarg3);
-  public final static native int ExecutionModel_getFilterChainOutputPortType(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_, int jarg3);
-  public final static native void ExecutionModel_setFilterChainImageInputPortData(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_, int jarg3, int jarg4, int jarg5, int jarg6, short[] jarg7);
-  public final static native void ExecutionModel_executeFilterChain(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_);
   public final static native long ExecutionModel_getLoadedFilterLibraries(long jarg1, ExecutionModel jarg1_);
   public final static native long ExecutionModel_getInstance();
   public final static native void delete_FilterLibrary(long jarg1);

@@ -45,30 +45,6 @@ public class ExecutionModel {
     opencvpJNI.ExecutionModel_saveFilterChain(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain, path);
   }
 
-  public int getFilterChainInputPortCount(FilterChain filterChain) {
-    return opencvpJNI.ExecutionModel_getFilterChainInputPortCount(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain);
-  }
-
-  public int getFilterChainOutputPortCount(FilterChain filterChain) {
-    return opencvpJNI.ExecutionModel_getFilterChainOutputPortCount(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain);
-  }
-
-  public PortType getFilterChainInputPortType(FilterChain filterChain, int portIndex) {
-    return PortType.swigToEnum(opencvpJNI.ExecutionModel_getFilterChainInputPortType(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain, portIndex));
-  }
-
-  public PortType getFilterChainOutputPortType(FilterChain filterChain, int portIndex) {
-    return PortType.swigToEnum(opencvpJNI.ExecutionModel_getFilterChainOutputPortType(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain, portIndex));
-  }
-
-  public void setFilterChainImageInputPortData(FilterChain filterChain, int portIndex, int width, int height, ImageDataType dataType, short[] data) {
-    opencvpJNI.ExecutionModel_setFilterChainImageInputPortData(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain, portIndex, width, height, dataType.swigValue(), data);
-  }
-
-  public void executeFilterChain(FilterChain filterChain) {
-    opencvpJNI.ExecutionModel_executeFilterChain(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain);
-  }
-
   public FilterLibraryVector getLoadedFilterLibraries() {
     return new FilterLibraryVector(opencvpJNI.ExecutionModel_getLoadedFilterLibraries(swigCPtr, this), true);
   }
