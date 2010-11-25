@@ -17,8 +17,10 @@ class FilterChain : public InputPortContainer, public OutputPortContainer {
 	friend class ExecutionModel;
 
 	private:
+		// TODO Remove hardcoded input and output ports
 		ImageInputPort inPort;
 		ImageOutputPort outPort;
+
 		std::vector<Filter*> filters;
 
 	private:

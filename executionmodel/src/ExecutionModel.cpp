@@ -13,6 +13,7 @@ ExecutionModel* ExecutionModel::instance = 0;
  * Merge the available filters in all the filter libraries
  */
 ExecutionModel::ExecutionModel() {
+	// TODO Look for filters instead of loading a hardcoded one
 	FilterLibrary filterLibrary("demo.dll");
 	if(filterLibrary.isValid()) {
 		loadedFilterLibraries.push_back(filterLibrary);
