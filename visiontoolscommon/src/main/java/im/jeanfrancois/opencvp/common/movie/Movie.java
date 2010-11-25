@@ -7,4 +7,5 @@ package im.jeanfrancois.opencvp.common.movie;
  */
 public interface Movie {
 	public int getFrameCount();
+	public byte[] getFrameData();
 }
