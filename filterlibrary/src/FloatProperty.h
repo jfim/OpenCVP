@@ -7,7 +7,7 @@
 
 class FloatProperty : public NumericProperty<float> {
 	public:
-		IntProperty(PropertyContainer* container, std::string name, float minValue, float maxValue, float defaultValue) : NumericProperty<float>(container, name, minValue, maxValue, defaultValue) {}
+		FloatProperty(PropertyContainer* container, std::string name, float minValue, float maxValue, float defaultValue) : NumericProperty<float>(container, name, minValue, maxValue, defaultValue) {}
 };
 
 #endif
