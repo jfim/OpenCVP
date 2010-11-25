@@ -8,16 +8,16 @@
 
 package im.jeanfrancois.opencvp.nativeinterface.internal;
 
-public class InputPortPtrVector {
+public class InputPortVector {
   private long swigCPtr;
   protected boolean swigCMemOwn;
 
-  public InputPortPtrVector(long cPtr, boolean cMemoryOwn) {
+  public InputPortVector(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  public static long getCPtr(InputPortPtrVector obj) {
+  public static long getCPtr(InputPortVector obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -29,51 +29,51 @@ public class InputPortPtrVector {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        opencvpJNI.delete_InputPortPtrVector(swigCPtr);
+        opencvpJNI.delete_InputPortVector(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public InputPortPtrVector() {
-    this(opencvpJNI.new_InputPortPtrVector__SWIG_0(), true);
+  public InputPortVector() {
+    this(opencvpJNI.new_InputPortVector__SWIG_0(), true);
   }
 
-  public InputPortPtrVector(long n) {
-    this(opencvpJNI.new_InputPortPtrVector__SWIG_1(n), true);
+  public InputPortVector(long n) {
+    this(opencvpJNI.new_InputPortVector__SWIG_1(n), true);
   }
 
   public long size() {
-    return opencvpJNI.InputPortPtrVector_size(swigCPtr, this);
+    return opencvpJNI.InputPortVector_size(swigCPtr, this);
   }
 
   public long capacity() {
-    return opencvpJNI.InputPortPtrVector_capacity(swigCPtr, this);
+    return opencvpJNI.InputPortVector_capacity(swigCPtr, this);
   }
 
   public void reserve(long n) {
-    opencvpJNI.InputPortPtrVector_reserve(swigCPtr, this, n);
+    opencvpJNI.InputPortVector_reserve(swigCPtr, this, n);
   }
 
   public boolean isEmpty() {
-    return opencvpJNI.InputPortPtrVector_isEmpty(swigCPtr, this);
+    return opencvpJNI.InputPortVector_isEmpty(swigCPtr, this);
   }
 
   public void clear() {
-    opencvpJNI.InputPortPtrVector_clear(swigCPtr, this);
+    opencvpJNI.InputPortVector_clear(swigCPtr, this);
   }
 
   public void add(InputPort x) {
-    opencvpJNI.InputPortPtrVector_add(swigCPtr, this, InputPort.getCPtr(x), x);
+    opencvpJNI.InputPortVector_add(swigCPtr, this, InputPort.getCPtr(x), x);
   }
 
   public InputPort get(int i) {
-    long cPtr = opencvpJNI.InputPortPtrVector_get(swigCPtr, this, i);
+    long cPtr = opencvpJNI.InputPortVector_get(swigCPtr, this, i);
     return (cPtr == 0) ? null : new InputPort(cPtr, false);
   }
 
   public void set(int i, InputPort val) {
-    opencvpJNI.InputPortPtrVector_set(swigCPtr, this, i, InputPort.getCPtr(val), val);
+    opencvpJNI.InputPortVector_set(swigCPtr, this, i, InputPort.getCPtr(val), val);
   }
 
 }

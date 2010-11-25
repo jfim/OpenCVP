@@ -68,7 +68,8 @@ public class FilterLibraryVector {
   }
 
   public FilterLibrary get(int i) {
-    return new FilterLibrary(opencvpJNI.FilterLibraryVector_get(swigCPtr, this, i), false);
+    long cPtr = opencvpJNI.FilterLibraryVector_get(swigCPtr, this, i);
+    return (cPtr == 0) ? null : new FilterLibrary(cPtr, false);
   }
 
   public void set(int i, FilterLibrary val) {

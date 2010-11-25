@@ -8,16 +8,6 @@
 
 %apply signed char[] { signed char* };
 
-namespace std {
-    %template(StringVector) vector<string>;
-    %template(FilterLibraryVector) vector<FilterLibrary>;
-    %template(InputPortPtrVector) vector<InputPort*>;
-    %template(OutputPortPtrVector) vector<OutputPort*>;
-    %template(PropertyPtrVector) vector<Property*>;
-}
-
-%shared_ptr(FilterChain)
-
 %{
 #include "InputPort.h"
 #include "OutputPort.h"
@@ -28,6 +18,16 @@ namespace std {
 #include "FilterChain.h"
 #include "Filter.h"
 %}
+
+namespace std {
+    %template(StringVector) vector<string>;
+    %template(FilterLibraryVector) vector<FilterLibrary*>;
+    %template(InputPortVector) vector<InputPort*>;
+    %template(OutputPortVector) vector<OutputPort*>;
+    %template(PropertyVector) vector<Property*>;
+}
+
+%shared_ptr(FilterChain)
 
 %include "InputPort.h"
 %include "OutputPort.h"

@@ -8,16 +8,16 @@
 
 package im.jeanfrancois.opencvp.nativeinterface.internal;
 
-public class PropertyPtrVector {
+public class PropertyVector {
   private long swigCPtr;
   protected boolean swigCMemOwn;
 
-  public PropertyPtrVector(long cPtr, boolean cMemoryOwn) {
+  public PropertyVector(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  public static long getCPtr(PropertyPtrVector obj) {
+  public static long getCPtr(PropertyVector obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -29,51 +29,51 @@ public class PropertyPtrVector {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        opencvpJNI.delete_PropertyPtrVector(swigCPtr);
+        opencvpJNI.delete_PropertyVector(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public PropertyPtrVector() {
-    this(opencvpJNI.new_PropertyPtrVector__SWIG_0(), true);
+  public PropertyVector() {
+    this(opencvpJNI.new_PropertyVector__SWIG_0(), true);
   }
 
-  public PropertyPtrVector(long n) {
-    this(opencvpJNI.new_PropertyPtrVector__SWIG_1(n), true);
+  public PropertyVector(long n) {
+    this(opencvpJNI.new_PropertyVector__SWIG_1(n), true);
   }
 
   public long size() {
-    return opencvpJNI.PropertyPtrVector_size(swigCPtr, this);
+    return opencvpJNI.PropertyVector_size(swigCPtr, this);
   }
 
   public long capacity() {
-    return opencvpJNI.PropertyPtrVector_capacity(swigCPtr, this);
+    return opencvpJNI.PropertyVector_capacity(swigCPtr, this);
   }
 
   public void reserve(long n) {
-    opencvpJNI.PropertyPtrVector_reserve(swigCPtr, this, n);
+    opencvpJNI.PropertyVector_reserve(swigCPtr, this, n);
   }
 
   public boolean isEmpty() {
-    return opencvpJNI.PropertyPtrVector_isEmpty(swigCPtr, this);
+    return opencvpJNI.PropertyVector_isEmpty(swigCPtr, this);
   }
 
   public void clear() {
-    opencvpJNI.PropertyPtrVector_clear(swigCPtr, this);
+    opencvpJNI.PropertyVector_clear(swigCPtr, this);
   }
 
   public void add(Property x) {
-    opencvpJNI.PropertyPtrVector_add(swigCPtr, this, Property.getCPtr(x), x);
+    opencvpJNI.PropertyVector_add(swigCPtr, this, Property.getCPtr(x), x);
   }
 
   public Property get(int i) {
-    long cPtr = opencvpJNI.PropertyPtrVector_get(swigCPtr, this, i);
+    long cPtr = opencvpJNI.PropertyVector_get(swigCPtr, this, i);
     return (cPtr == 0) ? null : new Property(cPtr, false);
   }
 
   public void set(int i, Property val) {
-    opencvpJNI.PropertyPtrVector_set(swigCPtr, this, i, Property.getCPtr(val), val);
+    opencvpJNI.PropertyVector_set(swigCPtr, this, i, Property.getCPtr(val), val);
   }
 
 }

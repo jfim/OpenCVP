@@ -35,16 +35,16 @@ public class Filter {
     opencvpJNI.Filter_execute(swigCPtr, this);
   }
 
-  public InputPortPtrVector getInputPorts() {
-    return new InputPortPtrVector(opencvpJNI.Filter_getInputPorts(swigCPtr, this), true);
+  public InputPortVector getInputPorts() {
+    return new InputPortVector(opencvpJNI.Filter_getInputPorts(swigCPtr, this), true);
   }
 
-  public OutputPortPtrVector getOutputPorts() {
-    return new OutputPortPtrVector(opencvpJNI.Filter_getOutputPorts(swigCPtr, this), true);
+  public OutputPortVector getOutputPorts() {
+    return new OutputPortVector(opencvpJNI.Filter_getOutputPorts(swigCPtr, this), true);
   }
 
-  public PropertyPtrVector getProperties() {
-    return new PropertyPtrVector(opencvpJNI.Filter_getProperties(swigCPtr, this), true);
+  public PropertyVector getProperties() {
+    return new PropertyVector(opencvpJNI.Filter_getProperties(swigCPtr, this), true);
   }
 
 }
