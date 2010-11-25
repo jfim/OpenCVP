@@ -31,6 +31,10 @@ public class opencvpJNI {
   public final static native long FilterLibraryVector_get(long jarg1, FilterLibraryVector jarg1_, int jarg2);
   public final static native void FilterLibraryVector_set(long jarg1, FilterLibraryVector jarg1_, int jarg2, long jarg3, FilterLibrary jarg3_);
   public final static native void delete_FilterLibraryVector(long jarg1);
+  public final static native void delete_InputPortContainer(long jarg1);
+  public final static native long InputPortContainer_getInputPorts(long jarg1, InputPortContainer jarg1_);
+  public final static native void delete_OutputPortContainer(long jarg1);
+  public final static native long OutputPortContainer_getOutputPorts(long jarg1, OutputPortContainer jarg1_);
   public final static native int IMAGE_DATA_TYPE_8UC1_get();
   public final static native int IMAGE_DATA_TYPE_8UC2_get();
   public final static native int IMAGE_DATA_TYPE_8UC3_get();
@@ -61,13 +65,13 @@ public class opencvpJNI {
   public final static native int IMAGE_DATA_TYPE_64FC4_get();
   public final static native long ExecutionModel_createFilterChain(long jarg1, ExecutionModel jarg1_);
   public final static native long ExecutionModel_loadFilterChain(long jarg1, ExecutionModel jarg1_, String jarg2);
-  public final static native void ExecutionModel_saveFilterChain(long jarg1, ExecutionModel jarg1_, long jarg2, String jarg3);
-  public final static native int ExecutionModel_getFilterChainInputPortCount(long jarg1, ExecutionModel jarg1_, long jarg2);
-  public final static native int ExecutionModel_getFilterChainOutputPortCount(long jarg1, ExecutionModel jarg1_, long jarg2);
-  public final static native int ExecutionModel_getFilterChainInputPortType(long jarg1, ExecutionModel jarg1_, long jarg2, int jarg3);
-  public final static native int ExecutionModel_getFilterChainOutputPortType(long jarg1, ExecutionModel jarg1_, long jarg2, int jarg3);
-  public final static native void ExecutionModel_setFilterChainImageInputPortData(long jarg1, ExecutionModel jarg1_, long jarg2, int jarg3, int jarg4, int jarg5, int jarg6, short[] jarg7);
-  public final static native void ExecutionModel_executeFilterChain(long jarg1, ExecutionModel jarg1_, long jarg2);
+  public final static native void ExecutionModel_saveFilterChain(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_, String jarg3);
+  public final static native int ExecutionModel_getFilterChainInputPortCount(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_);
+  public final static native int ExecutionModel_getFilterChainOutputPortCount(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_);
+  public final static native int ExecutionModel_getFilterChainInputPortType(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_, int jarg3);
+  public final static native int ExecutionModel_getFilterChainOutputPortType(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_, int jarg3);
+  public final static native void ExecutionModel_setFilterChainImageInputPortData(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_, int jarg3, int jarg4, int jarg5, int jarg6, short[] jarg7);
+  public final static native void ExecutionModel_executeFilterChain(long jarg1, ExecutionModel jarg1_, long jarg2, FilterChain jarg2_);
   public final static native long ExecutionModel_getLoadedFilterLibraries(long jarg1, ExecutionModel jarg1_);
   public final static native long ExecutionModel_getInstance();
   public final static native void delete_FilterLibrary(long jarg1);
@@ -77,4 +81,10 @@ public class opencvpJNI {
   public final static native String FilterLibrary_getVersion(long jarg1, FilterLibrary jarg1_);
   public final static native String FilterLibrary_getLibraryName(long jarg1, FilterLibrary jarg1_);
   public final static native long FilterLibrary_getFilterClassNames(long jarg1, FilterLibrary jarg1_);
+  public final static native void delete_FilterChain(long jarg1);
+  public final static native void FilterChain_addFilter(long jarg1, FilterChain jarg1_, long jarg2, Filter jarg2_);
+  public final static native void FilterChain_execute(long jarg1, FilterChain jarg1_);
+  public final static native void Filter_execute(long jarg1, Filter jarg1_);
+  public final static native long FilterChain_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long Filter_SWIGUpcast(long jarg1);
 }

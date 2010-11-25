@@ -31,42 +31,42 @@ public class ExecutionModel {
     }
   }
 
-  public SWIGTYPE_p_FilterChain createFilterChain() {
+  public FilterChain createFilterChain() {
     long cPtr = opencvpJNI.ExecutionModel_createFilterChain(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_FilterChain(cPtr, true);
+    return (cPtr == 0) ? null : new FilterChain(cPtr, true);
   }
 
-  public SWIGTYPE_p_FilterChain loadFilterChain(String path) {
+  public FilterChain loadFilterChain(String path) {
     long cPtr = opencvpJNI.ExecutionModel_loadFilterChain(swigCPtr, this, path);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_FilterChain(cPtr, true);
+    return (cPtr == 0) ? null : new FilterChain(cPtr, true);
   }
 
-  public void saveFilterChain(SWIGTYPE_p_FilterChain filterChain, String path) {
-    opencvpJNI.ExecutionModel_saveFilterChain(swigCPtr, this, SWIGTYPE_p_FilterChain.getCPtr(filterChain), path);
+  public void saveFilterChain(FilterChain filterChain, String path) {
+    opencvpJNI.ExecutionModel_saveFilterChain(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain, path);
   }
 
-  public int getFilterChainInputPortCount(SWIGTYPE_p_FilterChain filterChain) {
-    return opencvpJNI.ExecutionModel_getFilterChainInputPortCount(swigCPtr, this, SWIGTYPE_p_FilterChain.getCPtr(filterChain));
+  public int getFilterChainInputPortCount(FilterChain filterChain) {
+    return opencvpJNI.ExecutionModel_getFilterChainInputPortCount(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain);
   }
 
-  public int getFilterChainOutputPortCount(SWIGTYPE_p_FilterChain filterChain) {
-    return opencvpJNI.ExecutionModel_getFilterChainOutputPortCount(swigCPtr, this, SWIGTYPE_p_FilterChain.getCPtr(filterChain));
+  public int getFilterChainOutputPortCount(FilterChain filterChain) {
+    return opencvpJNI.ExecutionModel_getFilterChainOutputPortCount(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain);
   }
 
-  public PortType getFilterChainInputPortType(SWIGTYPE_p_FilterChain filterChain, int portIndex) {
-    return PortType.swigToEnum(opencvpJNI.ExecutionModel_getFilterChainInputPortType(swigCPtr, this, SWIGTYPE_p_FilterChain.getCPtr(filterChain), portIndex));
+  public PortType getFilterChainInputPortType(FilterChain filterChain, int portIndex) {
+    return PortType.swigToEnum(opencvpJNI.ExecutionModel_getFilterChainInputPortType(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain, portIndex));
   }
 
-  public PortType getFilterChainOutputPortType(SWIGTYPE_p_FilterChain filterChain, int portIndex) {
-    return PortType.swigToEnum(opencvpJNI.ExecutionModel_getFilterChainOutputPortType(swigCPtr, this, SWIGTYPE_p_FilterChain.getCPtr(filterChain), portIndex));
+  public PortType getFilterChainOutputPortType(FilterChain filterChain, int portIndex) {
+    return PortType.swigToEnum(opencvpJNI.ExecutionModel_getFilterChainOutputPortType(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain, portIndex));
   }
 
-  public void setFilterChainImageInputPortData(SWIGTYPE_p_FilterChain filterChain, int portIndex, int width, int height, ImageDataType dataType, short[] data) {
-    opencvpJNI.ExecutionModel_setFilterChainImageInputPortData(swigCPtr, this, SWIGTYPE_p_FilterChain.getCPtr(filterChain), portIndex, width, height, dataType.swigValue(), data);
+  public void setFilterChainImageInputPortData(FilterChain filterChain, int portIndex, int width, int height, ImageDataType dataType, short[] data) {
+    opencvpJNI.ExecutionModel_setFilterChainImageInputPortData(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain, portIndex, width, height, dataType.swigValue(), data);
   }
 
-  public void executeFilterChain(SWIGTYPE_p_FilterChain filterChain) {
-    opencvpJNI.ExecutionModel_executeFilterChain(swigCPtr, this, SWIGTYPE_p_FilterChain.getCPtr(filterChain));
+  public void executeFilterChain(FilterChain filterChain) {
+    opencvpJNI.ExecutionModel_executeFilterChain(swigCPtr, this, FilterChain.getCPtr(filterChain), filterChain);
   }
 
   public FilterLibraryVector getLoadedFilterLibraries() {

@@ -16,9 +16,20 @@ namespace std {
 %shared_ptr(FilterChain)
 
 %{
+#include "Container.h"
+#include "InputPortContainer.h"
+#include "OutputPortContainer.h"
 #include "ExecutionModel.h"
 #include "FilterLibrary.h"
+#include "FilterChain.h"
+#include "Filter.h"
 %}
 
+%include "Container.h"
+%include "InputPortContainer.h"
+%include "OutputPortContainer.h"
 %include "ExecutionModel.h"
 %include "FilterLibrary.h"
+%include "FilterChain.h"
+%include "Filter.h"
+
